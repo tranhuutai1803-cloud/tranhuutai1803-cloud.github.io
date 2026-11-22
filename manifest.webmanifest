@@ -1,28 +1,49 @@
 {
+ "id": "/",
  "name": "Daruma N3",
  "short_name": "Daruma N3",
+ "description": "Học JLPT N3 và N4 bằng tiếng Việt: từ vựng, ngữ pháp, flashcard lặp lại ngắt quãng, lịch học mỗi ngày. Tiến độ lưu vào tài khoản của nhóm.",
  "lang": "vi",
- "start_url": "./",
+ "dir": "ltr",
+ "start_url": "./?app=1",
  "scope": "./",
  "display": "standalone",
- "background_color": "#16151a",
- "theme_color": "#16151a",
- "description": "Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.",
+ "background_color": "#0d1120",
+ "theme_color": "#0d1120",
+ "categories": [
+  "education"
+ ],
  "icons": [
   {
    "src": "icon-192.png",
    "sizes": "192x192",
-   "type": "image/png"
+   "type": "image/png",
+   "purpose": "any"
   },
   {
    "src": "icon-512.png",
    "sizes": "512x512",
-   "type": "image/png"
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
   },
   {
    "src": "icon.svg",
    "sizes": "any",
-   "type": "image/svg+xml"
+   "type": "image/svg+xml",
+   "purpose": "any"
   }
- ]
+ ],
+ "related_applications": [
+  {
+   "platform": "webapp",
+   "url": "https://tranhuutai1803-cloud.github.io/manifest.webmanifest"
+  }
+ ],
+ "prefer_related_applications": false
 }

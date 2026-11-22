@@ -15,13 +15,18 @@
 <meta property="og:image" content="https://tranhuutai1803-cloud.github.io/icon-512.png">
 <meta property="og:locale" content="vi_VN">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#16151a">
+<meta name="theme-color" content="#0d1120">
+<meta name="application-name" content="Daruma N3">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Daruma N3">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="google-site-verification" content="le9jQVmBJsoRbnAlUqIXqvBY6fw5QW9MPQTZ9NMIPzM">
 <link rel="manifest" href="manifest.webmanifest">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Daruma N3", "alternateName": ["Daruma N4", "N3 Nihongo Go", "MIMIKARA N3 Flashcard"], "url": "https://tranhuutai1803-cloud.github.io/", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "inLanguage": ["vi", "ja"], "description": "Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.", "softwareVersion": "6.10", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "VND"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Daruma N3", "alternateName": ["Daruma N4", "N3 Nihongo Go", "MIMIKARA N3 Flashcard"], "url": "https://tranhuutai1803-cloud.github.io/", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "inLanguage": ["vi", "ja"], "description": "Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.", "softwareVersion": "6.11", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "VND"}}</script>
 <script>window.MMK_SERVER = "https://script.google.com/macros/s/AKfycbxplbNcR2JKVCaU0STY8ZG1f55cYr7YzoacVLbtRZrfuSxj7m7t16ZOMFjCPZcwNleAQw/exec";</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1452,6 +1457,24 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
 .lvask h2{margin:0;font-size:16px}
 .lvask p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.5}
 .lvask .row{display:flex;flex-wrap:wrap;gap:8px}
+/* v6.11: install the app */
+.inst{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin:0 0 14px;padding:12px 14px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow-1)}
+.inst-ic{flex:none;width:46px;height:46px;border-radius:12px;background:#171b34;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);display:grid;place-items:center}
+.inst-ic .daruma{width:34px;height:34px}
+.inst-t{flex:1 1 240px;min-width:0;display:grid;gap:2px}
+.inst-t b{font-size:15px}
+.inst-t small{font-size:13px;color:var(--muted);line-height:1.45}
+.inst-b{display:flex;flex-wrap:wrap;gap:8px}
+.ihow{display:grid;gap:8px;margin-top:12px}
+.ihow details{border:1px solid var(--line);border-radius:12px;padding:9px 12px;background:var(--surface-2)}
+.ihow summary{cursor:pointer;font-weight:600;font-size:14px}
+.ihow .ihere{font-weight:500;font-size:12px;color:var(--pri);margin-left:6px}
+.ihow ol{margin:8px 0 2px;padding-left:20px;display:grid;gap:5px;font-size:13.5px;line-height:1.5;color:var(--ink-2)}
+.ihow p{margin:6px 0 0;font-size:12.5px;color:var(--muted);line-height:1.45}
+.ibox-ok{display:flex;gap:8px;align-items:flex-start;margin:0 0 10px;font-size:13.5px;line-height:1.5}
+.ibox-ok .ic{flex:none;color:var(--good);margin-top:2px}
+.auth-app{display:flex;gap:8px;align-items:flex-start;margin:0 0 12px;padding:9px 11px;border-radius:12px;background:var(--pri-soft);font-size:13px;line-height:1.45;color:var(--ink-2)}
+.auth-app .ic{flex:none;margin-top:1px;color:var(--pri)}
 .lvset{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .lvset .lvsw{margin:0;min-width:210px}
 @media (max-width:380px){.lvcard{padding:12px}.lvbig{font-size:26px;min-width:48px}}
@@ -1462,7 +1485,7 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
 <noscript><div style="max-width:640px;margin:40px auto;padding:0 16px;font:16px/1.6 system-ui;color:#eee"><h1>Daruma N3</h1><p>Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.</p><p>Hãy bật JavaScript để dùng ứng dụng.</p></div></noscript>
 <div id="app">
   <aside class="side" id="side">
-    <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.10</em></small></span></button>
+    <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.11</em></small></span></button>
     <div class="lvsw" id="lvSide" role="group" aria-label="Chọn trình độ học"><button type="button" data-act="lv" data-lv="n4" aria-pressed="false"><b>N4</b><small>Sơ cấp</small></button><button type="button" data-act="lv" data-lv="n3" aria-pressed="true"><b>N3</b><small>Trung cấp</small></button></div>
     <nav class="tabs" id="tabs" aria-label="Điều hướng"></nav>
     <div class="side-foot" id="sideFoot"></div>
@@ -1470,7 +1493,7 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
   <div class="page">
     <header class="top">
       <div class="wrap top-in">
-        <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.10</em></small></span></button>
+        <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.11</em></small></span></button>
         <button class="srch" data-act="search" aria-label="Tra cứu từ vựng, ngữ pháp"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span>Tra từ, chữ Hán, ngữ pháp…</span><kbd>/</kbd></button>
         <div class="tright"><button class="lvpill" id="lvTop" type="button" data-act="lvopen" aria-haspopup="dialog" aria-label="Chọn trình độ: đang học N3"><span id="lvTopT">N3</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><button class="acctbtn reg" id="regBtn" data-act="register" hidden>Đăng ký</button><button class="acctbtn" id="acctBtn" data-act="acct" hidden></button><button class="sync" id="sync" data-act="go" data-view="settings" data-s="connecting" aria-label="Trạng thái lưu dữ liệu"></button></div>
       </div>
@@ -1491,11 +1514,17 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
 (() => {
 'use strict';
 /* ================= App identity ================= */
-const APP_VER = '6.10', BUILD = '2026-11-18', FILE_NAME = 'MIMIKARA_N3_Flashcard_v6.10_2026-11-18';
+const APP_VER = '6.11', BUILD = '2026-11-22', FILE_NAME = 'MIMIKARA_N3_Flashcard_v6.11_2026-11-22';
 const WEB_URL = 'https:\/\/tranhuutai1803-cloud.github.io\/';   // public site of the group (accounts live there)
 const APP_NAME = 'Daruma N3';
 const SCHEMA = 1, LS_KEY = 'mimikara-n3-flashcard', LS_UI = 'mimikara-n3-flashcard-ui';
 const CHANGELOG = [
+  {v:'6.11', d:'22/11/2026', s:'Cài Daruma N3 thành ứng dụng trên điện thoại và máy tính', t:[
+    'Cài thẳng từ trang web của nhóm, không cần kho ứng dụng: nút Cài ứng dụng ở trang Hôm nay (trên điện thoại) và ở Cài đặt › Cài ứng dụng, kèm hướng dẫn cho iPhone, iPad, Android, máy tính Windows và Mac (Chrome, Edge, Safari).',
+    'Ứng dụng đã cài bắt buộc đăng nhập tài khoản học viên: mọi tiến độ và dữ liệu học được lưu vào máy chủ của nhóm. Tiến độ đang có trên máy được mang vào tài khoản ở lần đăng nhập đầu tiên (ô “Mang tiến độ…”); sau khi mang vào, bản sao trên máy được xóa để không bị mang nhầm sang tài khoản khác.',
+    'Ứng dụng mở được cả khi mạng chậm hoặc mất mạng (dùng bản đã lưu trên máy); phần học lúc mất mạng được đẩy lên máy chủ ngay khi có mạng lại. Ứng dụng tự cập nhật khi có bản mới.',
+    'Thanh tiêu đề của ứng dụng đổi màu theo giao diện sáng hoặc tối.'
+  ]},
   {v:'6.10', d:'18/11/2026', s:'Khung ký hiệu thể ngắn ghi đầy đủ: Thể thông thường', t:[
     'Mọi chỗ trước đây ghi 普通形, thể thường hay thể thông thường nay hiện cùng một khung “Thể thông thường” (gồm 4 dạng: Vる, Vない, Vた, Vなかった và các dạng tương ứng của tính từ, danh từ).'
   ]},
@@ -2434,10 +2463,101 @@ function saveSess() { if (ACC.sess) lsSet(SESS_KEY, JSON.stringify(ACC.sess)); e
 const urlTag = u => { let h = 7; for (const c of String(u)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h.toString(36); };
 const userKey = s => LS_KEY + '::' + (GAS ? 'gas' : 'srv-' + urlTag(s.url)) + '::' + s.user.name;
 const isAdmin = () => !!(ACC.sess && ACC.sess.user && ACC.sess.user.role === 'admin');
-const needLogin = () => GAS && !ACC.sess;
+const needLogin = () => (GAS || APP_MODE) && !ACC.sess;   // v6.11: the installed app always signs in, so its data lives on the server
 function normUrl(u) { u = String(u || '').trim().replace(/[?#].*$/, ''); return /^https:\/\/\S+$/i.test(u) || /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?\/\S*$/i.test(u) ? u : ''; }
 const FIXED_SRV = normUrl(window.MMK_SERVER || '');   // web edition: the group's server is built in
 const srvUrl = () => normUrl(lsGet(SRV_KEY) || '') || FIXED_SRV;
+/* ================= v6.11: installable app (PWA) ================= */
+const UA_ = navigator.userAgent || '';
+const IS_IOS = /iPad|iPhone|iPod/.test(UA_) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const IS_ANDROID = /Android/i.test(UA_), IS_MOBILE = IS_IOS || IS_ANDROID;
+const IS_MAC = !IS_IOS && /Macintosh|Mac OS X/.test(UA_);
+const IS_SAFARI = /Safari\//.test(UA_) && !/Chrome\/|Chromium|CriOS|FxiOS|EdgiOS|Edg\/|OPR\/|SamsungBrowser/.test(UA_);
+const IS_FIREFOX = /Firefox\/|FxiOS/.test(UA_);
+const INAPP = /Zalo/i.test(UA_) ? 'Zalo' : /FBAN|FBAV|FB_IAB|FBIOS|Messenger/.test(UA_) ? 'Facebook' : /Instagram/.test(UA_) ? 'Instagram' : /musical_ly|BytedanceWebview|TikTok/i.test(UA_) ? 'TikTok' : /\bLine\//.test(UA_) ? 'LINE' : '';
+const standaloneNow = () => { try { return ['standalone', 'fullscreen', 'minimal-ui', 'window-controls-overlay'].some(m => matchMedia(`(display-mode: ${m})`).matches) || navigator.standalone === true; } catch (e) { return false; } };
+// the installed app: launched from its icon (start_url carries ?app=1) or running in its own window
+let APP_MODE = !GAS && !IN_CLAUDE && !!FIXED_SRV && (standaloneNow() || /[?&]app=1(&|$)/.test(location.search));
+const PWA_OK = !GAS && !IN_CLAUDE && !!FIXED_SRV && 'serviceWorker' in navigator && (location.protocol === 'https:' || /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname));
+const INST_HIDE = 'daruma-install-hide';
+let INSTALL_EVT = null, INSTALLED_HERE = false;
+const webHost = () => String(WEB_URL || '').replace(/^https?:\/\//, '').replace(/\/$/, '');
+const devWord = () => /iPad/.test(UA_) || (IS_IOS && !/iPhone|iPod/.test(UA_)) ? 'iPad' : IS_MOBILE ? 'điện thoại' : 'máy tính';
+const instHere = () => IS_IOS ? 'ios' : IS_ANDROID ? 'android' : IS_MAC && IS_SAFARI ? 'macsafari' : 'pc';
+function instSteps() {
+  const pr = !!INSTALL_EVT;
+  return [
+    ['ios', 'iPhone, iPad', [
+      `Mở trang <b>${esc(location.host || webHost())}</b> bằng Safari.`,
+      'Bấm nút <b>Chia sẻ</b> (ô vuông có mũi tên đi lên) ở thanh dưới màn hình. Trên iPad nút này ở góc trên bên phải; trên iOS 26 nút nằm trong menu <b>⋯</b>.',
+      'Chọn <b>Thêm vào MH chính</b> (Add to Home Screen), chưa thấy thì kéo danh sách xuống, rồi bấm <b>Thêm</b>.',
+      'Mở Daruma N3 từ biểu tượng mới trên màn hình chính rồi đăng nhập.'],
+      'Chrome trên iPhone (iOS 16.4 trở lên) cũng cài được: nút Chia sẻ ở thanh địa chỉ → Thêm vào MH chính.'],
+    ['android', 'Điện thoại, máy tính bảng Android', [
+      'Mở trang bằng Chrome.',
+      pr ? 'Bấm nút <b>Cài ứng dụng</b> ở trên rồi bấm <b>Cài đặt</b>.' : 'Bấm <b>⋮</b> (góc trên bên phải) → <b>Thêm vào màn hình chính</b> (hoặc <b>Cài đặt ứng dụng</b>) → <b>Cài đặt</b>.',
+      'Mở Daruma N3 từ màn hình chính hoặc ngăn ứng dụng rồi đăng nhập.'],
+      'Samsung Internet: bấm ☰ → Thêm trang vào → Màn hình chính.'],
+    ['pc', 'Máy tính Windows, Mac (Chrome, Edge)', [
+      'Mở trang bằng Chrome hoặc Microsoft Edge.',
+      (pr ? 'Bấm nút <b>Cài ứng dụng</b> ở trên, hoặc' : 'Bấm') + ' biểu tượng cài đặt (màn hình nhỏ có mũi tên) ở cuối thanh địa chỉ → <b>Cài đặt</b>.',
+      'Không thấy biểu tượng: Chrome: <b>⋮</b> → <b>Truyền, lưu và chia sẻ</b> → <b>Cài đặt Daruma N3</b>; Edge: <b>…</b> → <b>Ứng dụng</b> → <b>Cài đặt Daruma N3</b>.',
+      'Ứng dụng mở trong cửa sổ riêng, có biểu tượng trên màn hình nền, thanh tác vụ (Windows) hoặc Launchpad (Mac).'],
+      'Firefox trên máy tính chưa cài được ứng dụng web: hãy dùng Chrome hoặc Edge.'],
+    ['macsafari', 'Mac (Safari)', [
+      'Cần macOS Sonoma (14) trở lên. Mở trang bằng Safari.',
+      'Trên thanh menu chọn <b>Tệp</b> (File) → <b>Thêm vào Dock</b> (Add to Dock) → <b>Thêm</b>.',
+      'Mở Daruma N3 từ Dock hoặc Launchpad rồi đăng nhập.'], '']
+  ];
+}
+function installHow() {
+  const here = instHere(), st = instSteps();
+  const one = ([k, name, steps, foot]) => `<details data-k="${k}"${k === here ? ' open' : ''}><summary>${name}${k === here ? '<span class="ihere">máy này</span>' : ''}</summary><ol>${steps.map(x => `<li>${x}</li>`).join('')}</ol>${foot ? `<p>${foot}</p>` : ''}</details>`;
+  const warn = INAPP ? `<p class="note warnline" style="margin:12px 0 0">${ic('warn')} Bạn đang mở trang bên trong ứng dụng ${INAPP}, nơi này không cài được. Bấm <b>⋯</b> hoặc <b>⋮</b> → <b>Mở bằng trình duyệt</b> (Safari, Chrome) rồi cài từ đó.</p>`
+    : IS_FIREFOX && !IS_MOBILE ? `<p class="note warnline" style="margin:12px 0 0">${ic('warn')} Firefox trên máy tính chưa cài được ứng dụng web. Hãy mở trang bằng Chrome hoặc Edge${IS_MAC ? ' (hoặc Safari)' : ''}.</p>` : '';
+  return warn + `<div class="ihow">${[...st.filter(x => x[0] === here), ...st.filter(x => x[0] !== here)].map(one).join('')}</div>`;
+}
+const instHidden = () => lsGet(INST_HIDE) === '1';
+function installBannerInner() {
+  if (!PWA_OK || APP_MODE || INSTALLED_HERE || instHidden()) return '';
+  if (!INSTALL_EVT && !IS_MOBILE) return '';   // a computer browser that has not offered installing: the steps stay in Settings
+  return `<section class="inst" aria-label="Cài ứng dụng"><span class="inst-ic">${daruma(1)}</span><div class="inst-t"><b>Cài ${APP_NAME} lên ${devWord()}</b><small>Mở từ màn hình chính như một ứng dụng. Bản cài lưu toàn bộ tiến độ vào tài khoản trên máy chủ của nhóm.</small></div><div class="inst-b"><button class="btn btn-pri btn-sm" data-act="install">${ic('download')} Cài ứng dụng</button><button class="btn btn-ghost btn-sm" data-act="insthide">Ẩn</button></div></section>`;
+}
+const installBanner = () => `<div id="instBan">${installBannerInner()}</div>`;
+function installBoxInner() {
+  if (APP_MODE) return `<p class="ibox-ok">${ic('check')}<span>Bạn đang dùng ${APP_NAME} dạng ứng dụng đã cài. Tiến độ được lưu vào tài khoản${ACC.sess ? ` <b>${esc(ACC.sess.user.name)}</b>` : ''} trên máy chủ của nhóm; ứng dụng tự cập nhật khi có mạng.</span></p>`;
+  if (!PWA_OK) return `<p class="small" style="margin:0">Muốn cài ${APP_NAME} lên điện thoại hoặc máy tính, mở trang web <a href="${esc(WEB_URL)}" target="_blank" rel="noopener">${esc(webHost())}</a> rồi bấm <b>Cài ứng dụng</b> ở trang Hôm nay hoặc mục Cài đặt.</p>`;
+  const done = INSTALLED_HERE ? `<p class="ibox-ok">${ic('check')}<span>Máy này đã cài ${APP_NAME}. Mở ứng dụng từ màn hình chính hoặc danh sách ứng dụng để học.</span></p>` : '';
+  const btn = INSTALL_EVT ? `<div class="row" style="margin:12px 0 0"><button class="btn btn-pri" data-act="install">${ic('download')} Cài ứng dụng</button></div>` : '';
+  return done + `<p class="small" style="margin:0">Cài thẳng từ trang web, không cần kho ứng dụng. Ứng dụng đã cài <b>bắt buộc đăng nhập</b>: mọi tiến độ và dữ liệu học được lưu vào máy chủ của nhóm, học trên máy nào cũng tiếp tục được. Tiến độ đang có trên máy này được mang vào tài khoản ở lần đăng nhập đầu tiên.</p>`
+    + (IS_IOS ? '<p class="small" style="margin:8px 0 0">Trên iPhone, iPad, ứng dụng đã cài không dùng chung dữ liệu với Safari: nếu đã học trên Safari mà chưa đăng nhập, hãy đăng nhập ở Safari trước (để ô “Mang tiến độ…” được đánh dấu) rồi mới cài.</p>' : '')
+    + btn + installHow();
+}
+const installPanel = () => `<section class="panel" id="instPanel"><h2>${ic('device')} Cài ứng dụng</h2><div id="instBox">${installBoxInner()}</div></section>`;
+function refreshInstallUI() {
+  const b = $('#instBan'); if (b) b.innerHTML = installBannerInner();
+  const p = $('#instBox'); if (p) p.innerHTML = installBoxInner();
+}
+async function doInstall() {
+  const e = INSTALL_EVT;
+  if (!e) { openModal(`<div class="mpad"><h2 class="mh">${ic('device')} Cài ${APP_NAME} lên ${devWord()}</h2><p class="small" style="margin:0">Ứng dụng đã cài bắt buộc đăng nhập; mọi tiến độ được lưu vào máy chủ của nhóm.</p>${installHow()}<div class="factions" style="margin-top:14px"><button class="btn btn-pri" data-act="closemodal">Đã hiểu</button></div></div>`); return; }
+  INSTALL_EVT = null;
+  try { await e.prompt(); const c = await e.userChoice; if (c && c.outcome === 'accepted') INSTALLED_HERE = true; } catch (err) {}
+  refreshInstallUI();
+}
+if (PWA_OK) {
+  const reg = () => navigator.serviceWorker.register('sw.js').catch(() => {});
+  if (document.readyState === 'complete') reg(); else window.addEventListener('load', reg, {once:true});
+  window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); INSTALL_EVT = e; refreshInstallUI(); });
+  window.addEventListener('appinstalled', () => { INSTALL_EVT = null; INSTALLED_HERE = true; refreshInstallUI(); toast(`Đã cài ${APP_NAME}. Mở ứng dụng từ màn hình chính hoặc danh sách ứng dụng.`); });
+  if (!APP_MODE && navigator.getInstalledRelatedApps) navigator.getInstalledRelatedApps().then(a => { if (a && a.length) { INSTALLED_HERE = true; refreshInstallUI(); } }).catch(() => {});
+  // Chrome on a computer moves the tab into the new app window right after installing: switch to the app's rules there too
+  try { matchMedia('(display-mode: standalone)').addEventListener('change', m => { if (m.matches && !APP_MODE) { APP_MODE = true; refreshInstallUI(); if (!SES) render(); } }); } catch (e) {}
+}
+window.addEventListener('online', () => {
+  if (ACC.sess && Sync.mode === 'server') { clearTimeout(SSync.timer); if (SSync.ready) SSync.push(); else SSync.init(); }
+  else if (needLogin() && ACC.infoErr && !ACC.infoBusy) loadAuthInfo(srvUrl());
+});
 const SRV_ERR = {
   bad_login:'Sai tên đăng nhập hoặc mật khẩu.', bad_password:'Mật khẩu hiện tại chưa đúng.', slow_down:'Nhập sai quá nhiều lần — hãy thử lại sau 5 phút.',
   locked:'Tài khoản đang bị khóa — hãy liên hệ quản trị viên.', auth:'Phiên đăng nhập đã hết hạn — hãy đăng nhập lại.',
@@ -2906,7 +3026,7 @@ function renderGate() {
   $('#tabs').innerHTML = ''; $('#bnav').innerHTML = ''; renderSync(); renderSide();
   const box = $('#authBox');
   if (box && !box.classList.contains('in-modal')) refreshAuth(); else $('#main').innerHTML = viewAuth();
-  if (!ACC.info && !ACC.infoBusy && !ACC.infoErr) loadAuthInfo();
+  if (!ACC.info && !ACC.infoBusy && !ACC.infoErr) loadAuthInfo(srvUrl());
 }
 
 /* ================= View: Today ================= */
@@ -3330,6 +3450,7 @@ function viewSettings() {
       <div id="impBox"></div>
       <div class="setrow" style="margin-top:8px"><div class="t"><b>Đặt lại tiến độ</b><small>Xóa lịch ôn của mọi thẻ (giữ nguyên Từ của tôi, mẹo nhớ và cài đặt).</small></div><button class="btn btn-danger btn-sm" data-act="resetall" data-confirm="Bấm lần nữa để xóa toàn bộ tiến độ">${ic('trash')} Đặt lại</button></div>
     </section>
+    ${installPanel()}
   </div><div class="stack">
     <details class="panel fold" id="foldHelp"><summary>${ic('info')} Cách học<span class="aside">bấm để xem</span></summary><div class="help fold-b">
       <p>Mặt trước thẻ từ vựng mặc định là <b>cách đọc</b>. Hãy tự nhớ chữ Hán, nghĩa, từ loại và cách dùng rồi bấm <b>Lật thẻ</b> để kiểm tra mặt sau.</p>
@@ -3349,6 +3470,7 @@ function viewSettings() {
       <p><b>Luyện tập nhiều bộ</b>: gộp thẻ cần ôn của các bộ đã chọn và trộn ngẫu nhiên; lật thẻ rồi bấm <b>Đã nhớ</b> (thẻ xong, bỏ khỏi lượt này) hoặc <b>Đang học</b> (thẻ quay lại, xen ngẫu nhiên giữa các thẻ chưa ôn). Lịch ôn của thẻ được cập nhật theo câu trả lời.</p>
       <p><b>Bỏ thẻ khỏi lịch ôn</b>: với từ hoặc mẫu bạn đã thuộc chắc, mở thẻ đó (bấm vào nó trong danh sách của bộ thẻ hoặc trong ô tìm kiếm) rồi bấm <b>Bỏ khỏi lịch ôn</b>. Xem lại hoặc đưa về lịch ôn trong Học › Của tôi › Thẻ đã bỏ qua.</p>
       <p><b>Tài khoản học viên</b>: mỗi người đăng nhập bằng tên đăng nhập + mật khẩu của mình nên tiến độ không lẫn vào nhau; học trên máy nào cũng tiếp tục được. Dùng chung máy thì nhớ <b>Đăng xuất</b> sau khi học.</p>
+      <p><b>Cài ứng dụng</b>: trên trang web của nhóm, bấm <b>Cài ứng dụng</b> (trang Hôm nay hoặc Cài đặt › Cài ứng dụng) để cài ${APP_NAME} lên điện thoại hoặc máy tính, không cần kho ứng dụng. Ứng dụng đã cài bắt buộc đăng nhập; mọi tiến độ được lưu vào máy chủ của nhóm.</p>
       <div class="keys"><kbd>Space</kbd><span>Lật thẻ (hoặc chạm vào thẻ)</span><kbd>1 · 2</kbd><span>Đang học · Đã nhớ (hoặc <kbd>←</kbd> <kbd>→</kbd>)</span><kbd>1–4</kbd><span>Chọn đáp án khi luyện đề</span><kbd>Enter</kbd><span>Kiểm tra cách đọc đã gõ · câu tiếp khi luyện đề</span><kbd>Z</kbd><span>Hoàn tác thẻ vừa chấm</span><kbd>Esc</kbd><span>Thoát phiên học</span><kbd>← →</kbd><span>Xem ngẫu nhiên: thẻ trước / sau (hoặc A / D) · <kbd>↑</kbd> <kbd>↓</kbd> biết / chưa biết (Z / X) · <kbd>C</kbd> đánh dấu · <kbd>P</kbd> tự phát</span></div>
     </div></details>
     <details class="panel fold" id="foldVer"><summary>${ic('layers')} Phiên bản<span class="aside">v${APP_VER} · ${BUILD.split('-').reverse().join('/')}</span></summary><div class="fold-b">
@@ -3803,6 +3925,7 @@ function startSession(sess, data, carry) {
   Sync.mode = 'server'; SSync.reset();
   if (data) mergeIncoming(data);
   if (carried) mergeIncoming(carried);
+  if (carried && !GAS) lsDel(LS_KEY);
   saveLocal();
   SSync.ready = true; SSync.lastSync = now();
   ADM.users = null; ADM.made = null;
@@ -3822,7 +3945,7 @@ function sessionEnded(reason) {
   UI.auth = {kind:'login', msg:reason === 'locked' ? SRV_ERR.locked : 'Phiên đăng nhập đã hết hạn hoặc mật khẩu vừa được đổi — hãy đăng nhập lại. Tiến độ chưa đồng bộ vẫn được giữ trên máy này.', busy:false, url:null};
   const msg = UI.auth.msg;
   signedOut();
-  if (!GAS) { openLoginModal('login'); UI.auth.msg = msg; refreshAuth(); }
+  if (!needLogin()) { openLoginModal('login'); UI.auth.msg = msg; refreshAuth(); }
 }
 async function doLogout(el) {
   if (!ACC.sess) return;
@@ -4592,7 +4715,7 @@ function viewToday() {
   const tt = `<section class="tt" aria-label="Thời khóa biểu hôm nay"><div class="tt-h"><h2>Thời khóa biểu hôm nay</h2><span class="aside">${doneN}/${nP} tiết xong</span><span class="tt-dots" aria-hidden="true">${rows.map((x, i) => `<i class="${i < doneN ? 'on' : ''}"></i>`).join('')}</span></div><div class="tt-cur"><span>Lịch theo giáo trình <b>${esc(curName())}</b> · ${goalLabel(N)} (${dmy(dateOfDay(1))} → ${dmy(dateOfDay(N))}) · ${fmtN(P.ids.length)} từ, ${fmtN(P.gids.length)} mẫu ngữ pháp</span><button class="btn btn-sec btn-sm" data-act="goaledit">${ic('book')} Đổi giáo trình / số ngày</button></div><ol class="tt-list">${rows.join('')}</ol></section>`;
   const pool = allIds().filter(id => S.cards[id]).length, lc = leechCards().length;
   const quick = `<section class="panel"><h2>${ic('bolt')} Luyện nhanh<span class="aside">không tính vào thời khóa biểu</span></h2><div class="qlinks"><button class="qlink sk-v" data-act="quiz" ${pool >= QUIZ_MIN ? '' : 'disabled'}>${ic('trophy')}<b>Đề từ vựng</b><small>${pool >= QUIZ_MIN ? QUIZ_N + ' câu kiểu JLPT' : 'cần học ' + QUIZ_MIN + ' từ'}</small></button><button class="qlink sk-g" data-act="gquiz">${ic('trophy')}<b>Đề ngữ pháp</b><small>điền mẫu, chọn nghĩa</small></button><button class="qlink sk-k" data-act="practice" data-k="leech" ${lc ? '' : 'disabled'}>${ic('warn')}<b>Thẻ hay quên</b><small>${lc ? lc + ' thẻ' : 'chưa có'}</small></button></div></section>`;
-  return lvAskPanel() + head + tt + catchPanel() + `<div class="td-grid"><div class="stack">${decksPanel()}${quick}</div><div class="stack">${darumaWeek()}${weekPanel(d)}</div></div>`;
+  return lvAskPanel() + head + installBanner() + tt + catchPanel() + `<div class="td-grid"><div class="stack">${decksPanel()}${quick}</div><div class="stack">${darumaWeek()}${weekPanel(d)}</div></div>`;
 }
 function decksPanel() {
   const ds = activeDecks();
@@ -4928,7 +5051,7 @@ function authHtml(inModal) {
   const foot = setup ? 'Lần đầu dùng máy chủ: mở Google Sheet máy chủ, tab CaiDat để xem Mã khởi tạo. Sau đó bạn tạo tài khoản cho học viên ở trang Quản trị.'
     : 'Đã có tài khoản: nhập tên đăng nhập và mật khẩu rồi bấm Đăng nhập. Chưa có: nhập đủ ba ô rồi bấm Đăng ký.' + (closed ? ' Nhóm đang tắt tự đăng ký, hãy nhờ quản trị viên tạo tài khoản.' : '') + ' Quên mật khẩu thì nhờ quản trị viên đặt lại.';
   return `<div id="authBox" class="auth-card${inModal ? ' in-modal' : ''}"><div class="auth-h"><span class="lg-d">${daruma(1)}</span><div><h2>${setup ? 'Tạo tài khoản quản trị' : 'Tài khoản học viên'}</h2><p class="small muted">${setup ? 'Tài khoản quản trị viên đầu tiên của nhóm.' : 'Mỗi người một tiến độ riêng, học tiếp được trên mọi máy.'}</p></div></div>
-    <form id="authForm" class="fstack" novalidate>${codeF}${nameF}${pwF}${urlF}${carry}${status}<p class="auth-err" id="authErr" role="alert">${esc(UI.auth.msg || '')}</p>${btns}</form>
+    ${!inModal && APP_MODE && !setup ? `<p class="auth-app">${ic('device')}<span>Bản cài trên máy: đăng nhập để học. Mọi tiến độ được lưu vào máy chủ của nhóm${IS_IOS && !carry ? '. Đã học trên Safari mà chưa đăng nhập: hãy đăng nhập ở Safari trước để mang tiến độ đó vào tài khoản' : ''}.</span></p>` : ''}<form id="authForm" class="fstack" novalidate>${codeF}${nameF}${pwF}${urlF}${carry}${status}<p class="auth-err" id="authErr" role="alert">${esc(UI.auth.msg || '')}</p>${btns}</form>
     <p class="auth-note">${foot}</p>${inModal ? `<div class="factions" style="margin-top:4px"><button class="btn btn-ghost" data-act="closemodal">Để sau</button></div>` : ''}</div>`;
 }
 const viewAuth = () => `<div class="auth">${authHtml(false)}</div>`;
@@ -5048,6 +5171,8 @@ const ACT = {
   },
   word: el => openWord(el.dataset.id),
   closemodal: () => closeModal(),
+  install: () => doInstall(),
+  insthide: () => { lsSet(INST_HIDE, '1'); refreshInstallUI(); toast('Đã ẩn. Cài lúc nào cũng được ở Cài đặt › Cài ứng dụng.'); },
   resetcard: el => { if (!armed(el)) return; delete S.cards[el.dataset.id]; delete S.cards[kId(el.dataset.id)]; touch('srs'); closeModal(); toast('Đã đặt lại thẻ về “Chưa học”'); if (SES) renderStudy(); else render(); },
   editword: el => { closeModal(); UI.editId = el.dataset.id; UI.view = 'add'; saveUI(); render(); window.scrollTo(0, 0); },
   delword: el => { if (!armed(el)) return; const w = WORDS.get(el.dataset.id); deleteWord(el.dataset.id); closeModal(); if (UI.editId === el.dataset.id) UI.editId = null; toast(`Đã xóa「${w ? w.w : ''}」`); render(); },
@@ -5236,7 +5361,14 @@ function applyTheme() {
   const r = document.documentElement;
   if (THEME === 'auto') { if (HOST_THEME && HOST_THEME !== 'navy') r.setAttribute('data-theme', HOST_THEME); else r.removeAttribute('data-theme'); }
   else r.setAttribute('data-theme', THEME);
+  syncThemeColor();
 }
+function syncThemeColor() {
+  const m = document.querySelector('meta[name="theme-color"]'); if (!m) return;
+  const c = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+  if (/^#[0-9a-f]{3,8}$/i.test(c) || /^rgb/i.test(c)) m.setAttribute('content', c);
+}
+try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncThemeColor); } catch (e) {}
 applyTheme();
 const themePanel = () => `<section class="panel"><h2>${ic('eye')} Giao diện</h2><div class="thpick" role="group" aria-label="Chọn giao diện">${THEMES.map(([k, l]) => `<button type="button" class="thb${THEME === k ? ' on' : ''}" data-act="theme" data-k="${k}" aria-pressed="${THEME === k}"><i class="thsw th-${k}" aria-hidden="true"></i>${l}</button>`).join('')}</div><p class="small muted" style="margin:10px 0 0">Lưu riêng cho máy này. “Theo máy” đổi sáng, tối theo cài đặt của thiết bị.</p></section>`;
 
