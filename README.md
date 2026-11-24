@@ -12,8 +12,8 @@ Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riê
 - N3 · Ngữ pháp: 110 mẫu Mimikara N3 + kính ngữ + 34 mẫu bổ sung, xếp thêm thành 12 bài và 8 bài ôn theo dàn bài Shinkanzen N3.
 - Flashcard lặp lại ngắt quãng: lật thẻ rồi chấm bằng hai nút Đang học / Đã nhớ; tự chọn nội dung mặt trước và mặt sau của thẻ. Thẻ chữ Hán, Hán Việt từng chữ, xem ngẫu nhiên, trắc nghiệm từ vựng và ngữ pháp, tra cứu nhanh.
 - Khách học ngay, tiến độ lưu trên máy. Thành viên nhóm đăng nhập (mã lớp, tên đăng nhập, mật khẩu) để đồng bộ giữa các máy.
-- Cài thành ứng dụng trên điện thoại và máy tính ngay từ trang web (Cài đặt › Cài ứng dụng), không cần kho ứng dụng. Ứng dụng đã cài bắt buộc đăng nhập: mọi tiến độ lưu vào máy chủ của nhóm.
+- Cài thành ứng dụng trên điện thoại và máy tính ngay từ trang web (Cài đặt › Cài ứng dụng), không cần kho ứng dụng. Máy tính Windows có bộ cài như phần mềm thông thường: [Daruma-N3-Setup.exe](https://github.com/tranhuutai1803-cloud/tranhuutai1803-cloud.github.io/releases/latest/download/Daruma-N3-Setup.exe). Ứng dụng đã cài bắt buộc đăng nhập: mọi tiến độ lưu vào máy chủ của nhóm.
 
 Nội dung các bộ theo dàn bài Shinkanzen do nhóm tự biên soạn; chỉ dùng thứ tự bài của sách để tiện học song song.
 
-Phiên bản 6.16 · 2026-11-24
+Phiên bản 6.17 · 2026-11-24

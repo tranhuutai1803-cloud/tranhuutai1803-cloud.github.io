@@ -1,0 +1,78 @@
+{
+  "name": "daruma-n3",
+  "productName": "Daruma N3",
+  "version": "1.0.0",
+  "description": "Daruma N3 – học tiếng Nhật JLPT N3, N4",
+  "author": "Daruma N3",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "45.4.1",
+    "electron-builder": "26.18.1",
+    "resedit": "3.1.1"
+  },
+  "build": {
+    "appId": "io.github.tranhuutai1803.daruma",
+    "productName": "Daruma N3",
+    "copyright": "Daruma N3",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "offline.html",
+      "icon.png",
+      "package.json"
+    ],
+    "asar": true,
+    "electronLanguages": [
+      "vi",
+      "en-US"
+    ],
+    "compression": "maximum",
+    "afterPack": "./afterPack.js",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "executableName": "DarumaN3",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Daruma N3",
+      "uninstallDisplayName": "Daruma N3",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "language": "1066",
+      "installerLanguages": [
+        "vi_VN"
+      ],
+      "artifactName": "Daruma-N3-Setup-${version}.${ext}"
+    },
+    "publish": {
+      "provider": "generic",
+      "url": "https://github.com/tranhuutai1803-cloud/tranhuutai1803-cloud.github.io/releases/latest/download/"
+    }
+  }
+}
