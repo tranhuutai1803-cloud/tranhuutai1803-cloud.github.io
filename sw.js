@@ -1,6 +1,6 @@
-/* Daruma N3 v6.11 - service worker: keeps a copy of the app so the installed app opens fast, even without network.
+/* Daruma N3 v6.12 - service worker: keeps a copy of the app so the installed app opens fast, even without network.
    Learning data never passes through here: the app sends it straight to the group's server. */
-const V = 'daruma-v6.11', FONTS = 'daruma-fonts';
+const V = 'daruma-v6.12', FONTS = 'daruma-fonts';
 const BASE = new URL('./', self.location).pathname;
 const CORE = ["index.html", "manifest.webmanifest", "icon.svg", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
 const isPage = u => u.origin === self.location.origin && (u.pathname === BASE || u.pathname === BASE + 'index.html');
