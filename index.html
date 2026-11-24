@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="google-site-verification" content="le9jQVmBJsoRbnAlUqIXqvBY6fw5QW9MPQTZ9NMIPzM">
 <link rel="manifest" href="manifest.webmanifest">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Daruma N3", "alternateName": ["Daruma N4", "N3 Nihongo Go", "MIMIKARA N3 Flashcard"], "url": "https://tranhuutai1803-cloud.github.io/", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "inLanguage": ["vi", "ja"], "description": "Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.", "softwareVersion": "6.13", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "VND"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Daruma N3", "alternateName": ["Daruma N4", "N3 Nihongo Go", "MIMIKARA N3 Flashcard"], "url": "https://tranhuutai1803-cloud.github.io/", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "inLanguage": ["vi", "ja"], "description": "Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.", "softwareVersion": "6.14", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "VND"}}</script>
 <script>window.MMK_SERVER = "https://script.google.com/macros/s/AKfycbxplbNcR2JKVCaU0STY8ZG1f55cYr7YzoacVLbtRZrfuSxj7m7t16ZOMFjCPZcwNleAQw/exec";</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -487,6 +487,27 @@ details.bulk[open] summary::after{transform:rotate(180deg)}
 .f-foot{font-size:13px;color:var(--muted);text-align:center;padding:0 16px 16px}
 @media (max-width:560px){.reading{font-size:58px}.reading.l2{font-size:50px}.reading.l3{font-size:42px}.reading.l4{font-size:34px}.reading.l5{font-size:28px}.face{min-height:min(48vh,400px)}.stchip{top:22px;left:22px}}
 .b-body{padding:18px 22px 22px;display:flex;flex-direction:column;gap:12px}
+/* v6.14: font size (Cài đặt › Giao diện): scales page content, flashcards, the buttons under them and dialogs */
+#main,.s-body-in,.s-ctl-in,.mbox{zoom:var(--fs,1)}
+.modal .mbox{max-height:calc((100dvh - 32px) / var(--fs,1))}
+.fspick{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:6px}
+.fspick .thb{gap:4px;padding:8px 4px 7px}
+.fspick .fsa{font-family:var(--f-jp);line-height:1.1;color:var(--ink)}
+.fspick small{font-size:11.5px;color:var(--muted);font-weight:400}
+.setlab{display:block;font-size:13.5px;font-weight:700;margin:14px 0 0}
+@media (max-width:460px){.fspick{grid-template-columns:repeat(3,1fr)}}
+/* v6.14: two columns when the back is taller than the screen */
+.s-body-in.fit2{max-width:min(1180px,100%)}
+.fit2 .face.back .b-body{display:block;columns:2;column-gap:34px;column-rule:1px dashed var(--line-2);padding:16px 24px 18px}
+.fit2 .face.back .b-body > *{margin:0 0 12px}
+.fit2 .face.back .b-body > .b-head{column-span:all;margin-bottom:14px}
+.fit2 .face.back .b-body > :last-child{margin-bottom:0}
+.fit2 .face.back .g-sense{display:block}
+.fit2 .face.back .g-sense > * + *{margin-top:8px}
+.fit2 .face.back .g-ex{display:block}
+.fit2 .face.back .g-ex li + li{margin-top:8px}
+.fit2 .face.back .g-sense > .g-row,.fit2 .face.back .b-body .lab{break-after:avoid}
+.fit2 .face.back .g-ex li,.fit2 .face.back .g-row,.fit2 .face.back .kv,.fit2 .face.back .g-note,.fit2 .face.back .mnote,.fit2 .face.back .addnote,.fit2 .face.back .leech,.fit2 .face.back .kitem,.fit2 .face.back .cnex,.fit2 .face.back .b-pair,.fit2 .face.back .phr li,.fit2 .face.back .kgc{break-inside:avoid}
 .b-head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px 14px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1.5px dashed var(--line-2)}
 .hw{font-size:54px;line-height:1.1;font-weight:700;display:block;overflow-wrap:anywhere}
 .hw.h2{font-size:46px}.hw.h3{font-size:38px}.hw.h4{font-size:30px}
@@ -1494,7 +1515,7 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
 <noscript><div style="max-width:640px;margin:40px auto;padding:0 16px;font:16px/1.6 system-ui;color:#eee"><h1>Daruma N3</h1><p>Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.</p><p>Hãy bật JavaScript để dùng ứng dụng.</p></div></noscript>
 <div id="app">
   <aside class="side" id="side">
-    <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.13</em></small></span></button>
+    <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.14</em></small></span></button>
     <div class="lvsw" id="lvSide" role="group" aria-label="Chọn trình độ học"><button type="button" data-act="lv" data-lv="n4" aria-pressed="false"><b>N4</b><small>Sơ cấp</small></button><button type="button" data-act="lv" data-lv="n3" aria-pressed="true"><b>N3</b><small>Trung cấp</small></button></div>
     <nav class="tabs" id="tabs" aria-label="Điều hướng"></nav>
     <div class="side-foot" id="sideFoot"></div>
@@ -1502,7 +1523,7 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
   <div class="page">
     <header class="top">
       <div class="wrap top-in">
-        <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.13</em></small></span></button>
+        <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.14</em></small></span></button>
         <button class="srch" data-act="search" aria-label="Tra cứu từ vựng, ngữ pháp"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span>Tra từ, chữ Hán, ngữ pháp…</span><kbd>/</kbd></button>
         <div class="tright"><button class="lvpill" id="lvTop" type="button" data-act="lvopen" aria-haspopup="dialog" aria-label="Chọn trình độ: đang học N3"><span id="lvTopT">N3</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><button class="acctbtn reg" id="regBtn" data-act="register" hidden>Đăng ký</button><button class="acctbtn" id="acctBtn" data-act="acct" hidden></button><button class="sync" id="sync" data-act="go" data-view="settings" data-s="connecting" aria-label="Trạng thái lưu dữ liệu"></button></div>
       </div>
@@ -1523,11 +1544,16 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
 (() => {
 'use strict';
 /* ================= App identity ================= */
-const APP_VER = '6.13', BUILD = '2026-11-24', FILE_NAME = 'MIMIKARA_N3_Flashcard_v6.13_2026-11-24';
+const APP_VER = '6.14', BUILD = '2026-11-24', FILE_NAME = 'MIMIKARA_N3_Flashcard_v6.14_2026-11-24';
 const WEB_URL = 'https:\/\/tranhuutai1803-cloud.github.io\/';   // public site of the group (accounts live there)
 const APP_NAME = 'Daruma N3';
 const SCHEMA = 1, LS_KEY = 'mimikara-n3-flashcard', LS_UI = 'mimikara-n3-flashcard-ui';
 const CHANGELOG = [
+  {v:'6.14', d:'24/11/2026', s:'Mặt sau thẻ dài tự chia 2 cột; chỉnh cỡ chữ trong Cài đặt', t:[
+    'Khi mặt sau của thẻ (nhất là thẻ ngữ pháp nhiều ý nghĩa và câu ví dụ) dài hơn màn hình, trên máy tính và máy tính bảng nằm ngang thẻ tự rộng ra và chia 2 cột: đầu thẻ nằm ngang phía trên, cách nối, ý nghĩa, ví dụ, lưu ý chảy sang cột thứ hai. Nếu vẫn dài, chữ thu nhỏ nhẹ (tối đa còn 82%).',
+    'Áp dụng cho mọi phiên học flashcard và Xem ngẫu nhiên; tự tính lại khi lật thẻ hoặc đổi cỡ cửa sổ. Thẻ ngắn giữ nguyên một cột. Điện thoại vẫn một cột và kéo xuống như trước vì màn hình quá hẹp để chia cột.',
+    'Cài đặt › Giao diện có thêm Cỡ chữ: Nhỏ (90%), Vừa (100%), Lớn (110%), Rất lớn (120%), Cực lớn (130%). Cỡ chữ áp dụng cho nội dung các trang, thẻ học, các nút dưới thẻ và hộp thoại; lưu riêng cho từng máy như giao diện.'
+  ]},
   {v:'6.13', d:'24/11/2026', s:'Từ vựng chuyên ngành: Nhựa composite (FRP), 174 thuật ngữ', t:[
     'Mục Từ vựng chuyên ngành có bộ đầu tiên, Nhựa composite (FRP), lấy từ bảng thuật ngữ của xưởng: Công đoạn, thao tác (114 từ); Dụng cụ, máy móc (29); Vật liệu, vật tư tiêu hao (20); Khác (11).',
     'Mỗi thẻ có cách đọc, nghĩa tiếng Việt, Hán Việt (khi có), giải thích tiếng Nhật và tiếng Việt; một số thẻ có ghi chú nghĩa sát hơn. Học bằng flashcard như các bộ khác; thẻ đến hạn vào phần Ôn thẻ đến hạn mỗi ngày; ô Tra cứu tìm được các thuật ngữ này. Dùng chung cho N3 và N4.'
@@ -3699,10 +3725,30 @@ function controlsHtml() {
   const tip = ty ? `<p class="sugg-note">${ty.ok ? 'Gõ đúng — gợi ý chấm <b>Đã nhớ</b>.' : 'Gõ chưa đúng — gợi ý chấm <b>Đang học</b> để thẻ quay lại sớm.'}</p>` : '';
   return `<div class="s-ctl-in rated">${tip}${rates}<div class="ctl2">${faces(true)}<button class="btn flip-sub" data-act="flip">${ic('flip')} Lật thẻ <span class="fl">${SES.flipped ? '· đang xem mặt sau' : '· đang xem mặt trước'}</span></button></div></div>`;
 }
+/* ================= v6.14: fit the back of the card to the screen ================= */
+const FIT_W = 820;
+function fitCard(extra) {
+  const body = $('#sbody') || $('#vbody'); if (!body || !body.offsetParent) return;
+  const inner = body.querySelector('.s-body-in'), back = body.querySelector('.face.back'), bb = back && back.querySelector('.b-body'); if (!inner || !bb) return;
+  inner.classList.remove('fit2'); bb.style.zoom = '';
+  const fs = fontScale();
+  if (window.innerWidth / fs < FIT_W) return;   // phones (or very large text on a small window): one column, scroll as before
+  const cs = getComputedStyle(inner), avail = body.clientHeight - (parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom) + (extra || 0)) * fs - 2;
+  const tall = () => back.getBoundingClientRect().height > avail;   // sizes as drawn on screen, after the font scale
+  if (!tall()) return;
+  inner.classList.add('fit2');
+  for (const z of ['0.94', '0.88', '0.82', '0.76']) { if (!tall()) break; bb.style.zoom = z; }
+}
+// before the flip the buttons under the card are lower than after it (Đang học / Đã nhớ): leave that room already
+const fitStudy = () => { if (SES && SES.cur && SES.mode !== 'quiz') fitCard(SES.flipped ? 0 : 50); else if (VW.open) fitCard(0); };
+let FIT_T = 0;
+window.addEventListener('resize', () => { clearTimeout(FIT_T); FIT_T = setTimeout(fitStudy, 120); });
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => fitStudy());
 function renderStudy() {
   if (SES.mode === 'quiz') { renderQuiz(); return; }
   const el = $('#study'), cur = SES.cur, w = cur ? itemOf(cur) : null;
   el.innerHTML = studyTop() + `<div class="s-body" id="sbody"><div class="s-body-in">${w ? (isGram(cur) ? gCardHtml(w) : cardHtml(w)) : endHtml()}</div></div>` + (w ? `<div class="s-ctl" id="sctl">${controlsHtml()}</div>` : '');
+  if (w) fitStudy();
   const c = $('#card'); if (c) c.focus({preventScroll:true});
 }
 function flip() {
@@ -3714,6 +3760,7 @@ function flip() {
   }
   if (SES.flipped) SES.revealed = true;
   const ctl = $('#sctl'); if (ctl) ctl.innerHTML = controlsHtml();
+  if (SES.flipped) fitStudy();
   const sb = $('#sbody'); if (sb && SES.flipped) sb.scrollTop = 0;
 }
 function kResHtml(w) {
@@ -4402,6 +4449,7 @@ function renderViewer() {
   const markH = mk ? `<span class="vmark ${mk > 0 ? 'ok' : 'no'}">${mk > 0 ? 'ĐÃ BIẾT' : 'CHƯA BIẾT'}</span>` : '';
   el.innerHTML = top + `<div class="s-body" id="vbody"><div class="s-body-in"><div class="card3d vcard ${cls}" id="vcard" data-act="vflip" tabindex="0" role="button" aria-label="Thẻ ${VW.i + 1} trên ${n} — nhấn để lật"><div class="card-in${VW.flipped ? ' flipped' : ''}" id="vcardIn"><section class="face front" aria-hidden="${VW.flipped}">${band}<div class="f-body">${markH}${fc.f}</div></section><section class="face back" aria-hidden="${!VW.flipped}">${band}<div class="f-body vback">${markH}${fc.b}</div></section></div></div>${JA_VOICE ? `<div class="vsay"><button class="speak" data-act="vsay" aria-label="Nghe phát âm">${ic('speaker')}<span>Nghe</span></button></div>` : ''}<p class="vkeys">Phím tắt: <kbd>Space</kbd> lật · <kbd>←</kbd> / <kbd>A</kbd> thẻ trước · <kbd>→</kbd> / <kbd>D</kbd> thẻ sau · <kbd>↑</kbd> / <kbd>Z</kbd> biết · <kbd>↓</kbd> / <kbd>X</kbd> chưa biết · <kbd>C</kbd> đánh dấu · <kbd>P</kbd> tự phát · <kbd>Esc</kbd> đóng</p></div></div>`
     + `<div class="s-ctl"><div class="s-ctl-in vctl"><button class="vb no" data-act="vmark" data-v="-1" title="Chưa biết (↓ hoặc X)">${ic('close')}<span>Chưa biết</span></button><button class="vb nav" data-act="vprev" aria-label="Thẻ trước" title="Thẻ trước (←)" ${VW.i ? '' : 'disabled'}>${ic('left')}</button><button class="vb flip" data-act="vflip" title="Lật (Space)">${ic('flip')}<span>Lật</span></button><button class="vb nav" data-act="vnext" aria-label="Thẻ sau" title="Thẻ sau (→)">${ic('right')}</button><button class="vb ok" data-act="vmark" data-v="1" title="Biết (↑ hoặc Z)">${ic('check')}<span>Biết</span></button><button class="vb star${st ? ' on' : ''}" data-act="vstar" aria-pressed="${st}" aria-label="Đánh dấu thẻ" title="Đánh dấu (C)">${ic('star', st ? 'fill' : '')}</button></div></div>`;
+  fitStudy();
   const c = $('#vcard'); if (c) c.focus({preventScroll:true});
 }
 function vwEndHtml() {
@@ -5282,6 +5330,7 @@ const ACT = {
   lbook: el => { UI.lbook = el.dataset.k === 'sk' ? 'sk' : 'mm'; saveUI(); render(); },
   search: () => openSearch(),
   theme: el => { THEME = el.dataset.k; lsSet(LS_THEME, THEME); applyTheme(); render(); },
+  fontsz: el => { FONT = el.dataset.k; lsSet(LS_FONT, FONT); applyFont(); render(); toast(`Cỡ chữ: ${(FONTS.find(x => x[0] === FONT) || [])[1]} (${Math.round(fontScale() * 100)}%)`); },
   calm: el => { const k = +el.dataset.s; UI.calM = k ? (UI.calM || 0) + k : 0; render(); },
   darumatip: (el) => toast(el.getAttribute('title') || ''),
   examedit: () => { if (SES) exitStudy(); go('settings'); const i = $('#setExam'); if (i) { i.scrollIntoView({block:'center'}); i.focus(); } },
@@ -5408,7 +5457,13 @@ function syncThemeColor() {
 }
 try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncThemeColor); } catch (e) {}
 applyTheme();
-const themePanel = () => `<section class="panel"><h2>${ic('eye')} Giao diện</h2><div class="thpick" role="group" aria-label="Chọn giao diện">${THEMES.map(([k, l]) => `<button type="button" class="thb${THEME === k ? ' on' : ''}" data-act="theme" data-k="${k}" aria-pressed="${THEME === k}"><i class="thsw th-${k}" aria-hidden="true"></i>${l}</button>`).join('')}</div><p class="small muted" style="margin:10px 0 0">Lưu riêng cho máy này. “Theo máy” đổi sáng, tối theo cài đặt của thiết bị.</p></section>`;
+/* v6.14: font size, kept for this device like the theme */
+const LS_FONT = 'daruma-font', FONTS = [['0.9', 'Nhỏ'], ['1', 'Vừa'], ['1.1', 'Lớn'], ['1.2', 'Rất lớn'], ['1.3', 'Cực lớn']];
+let FONT = (() => { const f = lsGet(LS_FONT); return FONTS.some(x => x[0] === f) ? f : '1'; })();
+const fontScale = () => +FONT || 1;
+function applyFont() { document.documentElement.style.setProperty('--fs', FONT); }
+applyFont();
+const themePanel = () => `<section class="panel"><h2>${ic('eye')} Giao diện</h2><div class="thpick" role="group" aria-label="Chọn giao diện">${THEMES.map(([k, l]) => `<button type="button" class="thb${THEME === k ? ' on' : ''}" data-act="theme" data-k="${k}" aria-pressed="${THEME === k}"><i class="thsw th-${k}" aria-hidden="true"></i>${l}</button>`).join('')}</div><span class="setlab">Cỡ chữ</span><div class="fspick" role="group" aria-label="Chọn cỡ chữ">${FONTS.map(([k, l]) => `<button type="button" class="thb${FONT === k ? ' on' : ''}" data-act="fontsz" data-k="${k}" aria-pressed="${FONT === k}"><span class="fsa" style="font-size:${Math.round(17 * k)}px" aria-hidden="true">Aあ</span>${l}<small>${Math.round(k * 100)}%</small></button>`).join('')}</div><p class="small muted" style="margin:10px 0 0">Giao diện và cỡ chữ lưu riêng cho máy này. “Theo máy” đổi sáng, tối theo cài đặt của thiết bị.</p></section>`;
 
 /* ================= v6.2: lịch tháng, nhìn là biết có trễ tiến độ không ================= */
 function monthPanel() {
