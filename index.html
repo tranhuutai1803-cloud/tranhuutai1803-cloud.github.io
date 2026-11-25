@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="google-site-verification" content="le9jQVmBJsoRbnAlUqIXqvBY6fw5QW9MPQTZ9NMIPzM">
 <link rel="manifest" href="manifest.webmanifest">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Daruma N3", "alternateName": ["Daruma N4", "N3 Nihongo Go", "MIMIKARA N3 Flashcard"], "url": "https://tranhuutai1803-cloud.github.io/", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "inLanguage": ["vi", "ja"], "description": "Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.", "softwareVersion": "6.18", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "VND"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Daruma N3", "alternateName": ["Daruma N4", "N3 Nihongo Go", "MIMIKARA N3 Flashcard"], "url": "https://tranhuutai1803-cloud.github.io/", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "inLanguage": ["vi", "ja"], "description": "Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.", "softwareVersion": "6.19", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "VND"}}</script>
 <script>window.MMK_SERVER = "https://script.google.com/macros/s/AKfycbxplbNcR2JKVCaU0STY8ZG1f55cYr7YzoacVLbtRZrfuSxj7m7t16ZOMFjCPZcwNleAQw/exec";</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -358,6 +358,13 @@ details.bulk[open] summary::after{transform:rotate(180deg)}
 .faces-btn:hover{background:var(--surface-3);color:var(--ink)}
 .faces-btn.ico{flex-direction:column;gap:3px;width:68px;min-height:54px;padding:4px 2px;border-radius:15px;font-size:11.5px;line-height:1.1}
 .faces-btn.ico .ic{width:20px;height:20px}
+
+/* ===== v6.19: ôn theo lịch — bốn nút Quên · Khó · Nhớ · Dễ, hàng dưới Đã biết · Lật thẻ · Mặt thẻ ===== */
+.ctl2.k3{grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto}
+.ctl2.k3 .btn{min-width:0}
+.faces-btn.sq{width:46px;padding:0;justify-content:center}
+.faces-btn.sq .ic{width:20px;height:20px}
+.known-btn kbd{margin-left:2px}
 .fread{font-size:26px;line-height:1.3;color:var(--ink-2);letter-spacing:.06em;text-align:center;overflow-wrap:anywhere;position:relative;z-index:1}
 .fhv{font-size:18px;letter-spacing:.1em;font-weight:700;color:var(--ver);text-align:center;position:relative;z-index:1}
 .fmean{font-size:22px;line-height:1.45;text-align:center;max-width:22em;overflow-wrap:anywhere;position:relative;z-index:1}
@@ -428,6 +435,8 @@ details.bulk[open] summary::after{transform:rotate(180deg)}
   .s-ctl-in.rated .ctl2{grid-template-columns:auto auto}
   .s-ctl-in.rated .ctl2 .btn{min-height:50px;width:auto;padding-left:14px;padding-right:14px}
   .s-ctl-in.rated .flip-sub .fl{display:none}
+  .s-ctl-in.rated .ctl2.k3{grid-template-columns:auto auto auto}
+  .s-ctl-in.rated .known-btn small,.s-ctl-in.rated .known-btn kbd{display:none}
 }
 
 /* study */
@@ -1545,7 +1554,7 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
 <noscript><div style="max-width:640px;margin:40px auto;padding:0 16px;font:16px/1.6 system-ui;color:#eee"><h1>Daruma N3</h1><p>Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.</p><p>Hãy bật JavaScript để dùng ứng dụng.</p></div></noscript>
 <div id="app">
   <aside class="side" id="side">
-    <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.18</em></small></span></button>
+    <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.19</em></small></span></button>
     <div class="lvsw" id="lvSide" role="group" aria-label="Chọn trình độ học"><button type="button" data-act="lv" data-lv="n4" aria-pressed="false"><b>N4</b><small>Sơ cấp</small></button><button type="button" data-act="lv" data-lv="n3" aria-pressed="true"><b>N3</b><small>Trung cấp</small></button></div>
     <nav class="tabs" id="tabs" aria-label="Điều hướng"></nav>
     <div class="side-foot" id="sideFoot"></div>
@@ -1553,7 +1562,7 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
   <div class="page">
     <header class="top">
       <div class="wrap top-in">
-        <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.18</em></small></span></button>
+        <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.19</em></small></span></button>
         <button class="srch" data-act="search" aria-label="Tra cứu từ vựng, ngữ pháp"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span>Tra từ, chữ Hán, ngữ pháp…</span><kbd>/</kbd></button>
         <div class="tright"><button class="lvpill" id="lvTop" type="button" data-act="lvopen" aria-haspopup="dialog" aria-label="Chọn trình độ: đang học N3"><span id="lvTopT">N3</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><button class="acctbtn reg" id="regBtn" data-act="register" hidden>Đăng ký</button><button class="acctbtn" id="acctBtn" data-act="acct" hidden></button><button class="sync" id="sync" data-act="go" data-view="settings" data-s="connecting" aria-label="Trạng thái lưu dữ liệu"></button></div>
       </div>
@@ -1574,11 +1583,16 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
 (() => {
 'use strict';
 /* ================= App identity ================= */
-const APP_VER = '6.18', BUILD = '2026-11-25', FILE_NAME = 'MIMIKARA_N3_Flashcard_v6.18_2026-11-25';
+const APP_VER = '6.19', BUILD = '2026-11-25', FILE_NAME = 'MIMIKARA_N3_Flashcard_v6.19_2026-11-25';
 const WEB_URL = 'https:\/\/tranhuutai1803-cloud.github.io\/';   // public site of the group (accounts live there)
 const APP_NAME = 'Daruma N3';
 const SCHEMA = 1, LS_KEY = 'mimikara-n3-flashcard', LS_UI = 'mimikara-n3-flashcard-ui';
 const CHANGELOG = [
+  {v:'6.19', d:'25/11/2026', s:'Ôn theo lịch: trở lại bốn nút Quên · Khó · Nhớ · Dễ và nút Đã biết', t:[
+    'Khi ôn và học thẻ theo lịch (Học hôm nay, các ngày học, Luyện tập flashcards của một bộ), sau khi lật thẻ lại có bốn nút chấm Quên, Khó, Nhớ, Dễ; dưới mỗi nút ghi lần gặp lại tiếp theo (thẻ mới: 1 phút, 6 phút, 10 phút, 4 ngày). Phím 1–4 chấm thẻ, ← là Quên, → là Nhớ.',
+    'Hàng dưới: Đã biết (phím 5) bỏ thẻ đã thuộc chắc khỏi lịch ôn (với từ vựng, bỏ cả thẻ đọc chữ Hán của từ đó; xem lại trong Học › Của tôi › Thẻ đã bỏ qua), Lật thẻ để xem lại mặt trước, và nút nhỏ Mặt thẻ. Bấm nhầm thì Hoàn tác (Z).',
+    'Cuối phiên ghi số lượt Quên, Khó, Nhớ, Dễ. Luyện tập nhiều bộ, Kiểm tra 100 từ và các bài luyện ở trang Luyện tập vẫn dùng hai nút Đang học · Đã nhớ (phím 1 · 2).'
+  ]},
   {v:'6.18', d:'25/11/2026', s:'Sửa từ vựng: đổi nghĩa, cách đọc, Hán Việt, cụm từ… của bất kỳ từ nào', t:[
     'Mở một từ rồi bấm Sửa, hoặc khi đang học lật thẻ rồi bấm nút bút chì trên dải màu (phím E); Xem ngẫu nhiên cũng có nút này. Sửa được từ, cách đọc, từ loại, trợ từ, Hán Việt, nghĩa, cụm từ; từ chuyên ngành sửa được cả giải thích và ghi chú. Từ của tôi cũng sửa trong cùng hộp này.',
     'Thay đổi lưu theo tài khoản và đồng bộ sang mọi máy; thẻ, danh sách, tra cứu, trắc nghiệm đều dùng nội dung đã sửa. Từ đã sửa có nhãn “Đã sửa”, hiện “Gốc: …” cạnh ô đã đổi, bấm Về bản gốc để quay lại; danh sách ở Học › Của tôi › Từ đã sửa.'
@@ -1715,7 +1729,7 @@ const START_EASE = 2500, MIN_EASE = 1300, LEARN_AHEAD = 20;
 const DEFAULT_START = (() => { const d = new Date(Date.now() - ROLL_H * 3600000); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); })();   // v6: the plan of a new learner starts on the day the app is first opened
 const WD = ['Chủ nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
 const WDS = ['CN','T2','T3','T4','T5','T6','T7'];
-const RLABEL = {1:'Đang học', 3:'Đã nhớ'};   // v6.4: the only two grades the learner sees
+const RLABEL = {1:'Quên', 2:'Khó', 3:'Nhớ', 4:'Dễ'}, RLABEL2 = {1:'Đang học', 3:'Đã nhớ'};   // v6.19: four grades when cards are reviewed on the schedule (srs), two in every other flashcard mode
 const ST_LABEL = {new:'Chưa học', learn:'Đang học', review:'Đang ôn', mature:'Đã thuộc'};
 const POS = {
   N:['Danh từ','n'], NS:['Danh từ','ns','する'], NA:['Danh từ','adj','な'],
@@ -2103,7 +2117,7 @@ function schedule(c, r, ms, fz) {
       const easy = Math.max(good + 1, Math.round((n.i + late) * e * 1.3));
       let iv;
       if (r === 2) { n.e = Math.max(MIN_EASE, n.e - 150); iv = hard; }
-      else if (r === 3) { iv = good; if (n.e < START_EASE) n.e = Math.min(START_EASE, n.e + 50); }   // v6.4: there is no Dễ button any more, so a card that keeps being remembered slowly wins back the ease it lost
+      else if (r === 3) iv = good;
       else { n.e += 150; iv = easy; }
       if (fz) iv = fuzzIvl(iv);
       n.i = Math.min(MAX_IVL, Math.max(1, iv)); n.d = dueAtDays(n.i, ms);
@@ -2112,15 +2126,16 @@ function schedule(c, r, ms, fz) {
   return n;
 }
 function fmtIvlDays(d) { if (d < 30) return d + ' ngày'; if (d < 365) return pct1(d / 30) + ' tháng'; return pct1(d / 365) + ' năm'; }
-/* v6.4 two buttons: Đang học = again (1), Đã nhớ = good (3). A card that is remembered the very first time it is shown
-   skips the 10-minute step and comes back the next day; a card that went through Đang học keeps both learning steps. */
+/* v6.19: srs sessions grade with the four buttons again (Quên 1 · Khó 2 · Nhớ 3 · Dễ 4) straight through schedule().
+   Luyện tập nhiều bộ keeps two buttons, Đang học (1) and Đã nhớ (3), and has no Dễ: a review card answered Đã nhớ there
+   slowly wins back the ease it lost (+50 each time, up to the starting ease), as it did in v6.4 to v6.18. */
 function schedule2(c, r, ms, fz) {
-  const first = !c || c.s === 0, n = schedule(c, r, ms, fz);
-  if (first && r === 3 && n.s === 1) { n.s = 2; n.p = 0; n.i = GRAD_IVL; n.d = dueAtDays(GRAD_IVL, ms); }
+  const n = schedule(c, r, ms, fz);
+  if (r === 3 && c && c.s === 2 && n.e < START_EASE) n.e = Math.min(START_EASE, n.e + 50);
   return n;
 }
-function previewLabel(c, r) {
-  const n = schedule2(c, r, now(), false);
+function previewLabel(c, r) {   // next visit written under a grading button of an srs session: 1 phút · 6 phút · 10 phút · 4 ngày for a new card
+  const n = schedule(c, r, now(), false);
   if (n.s === 2) return fmtIvlDays(n.i);
   const m = Math.max(1, Math.round(n.d - now() / MIN));
   return m < 60 ? m + ' phút' : Math.round(m / 60) + ' giờ';
@@ -3791,7 +3806,7 @@ function viewSettings() {
     <details class="panel fold" id="foldHelp"><summary>${ic('info')} Cách học<span class="aside">bấm để xem</span></summary><div class="help fold-b">
       <p>Mặt trước thẻ từ vựng mặc định là <b>cách đọc</b>. Hãy tự nhớ chữ Hán, nghĩa, từ loại và cách dùng rồi bấm <b>Lật thẻ</b> để kiểm tra mặt sau.</p>
       <p><b>Mặt thẻ</b>: muốn mặt trước là chữ Hán hay nghĩa tiếng Việt, hoặc muốn bớt mục ở mặt sau, bấm nút <b>Mặt thẻ</b> ngay trong phiên học (cạnh nút Lật thẻ) hoặc ở Cài đặt. Đánh dấu từng mục cho mặt trước và mặt sau, hoặc chọn một cách bày có sẵn. Thẻ từ vựng và thẻ ngữ pháp chỉnh riêng; lựa chọn được lưu theo tài khoản. Xem ngẫu nhiên vẫn dùng nút đổi chiều JP→VI / VI→JP của nó.</p>
-      <p>Sau khi lật, tự chấm bằng một trong hai nút. <b style="color:var(--hard)">Đang học</b>: chưa nhớ chắc, thẻ quay lại ngay trong phiên (sau khoảng 1 phút). <b style="color:var(--good)">Đã nhớ</b>: thẻ được xếp lịch ôn thưa dần (1 → 3 → 8 → 20 ngày…). Thẻ đang học cần bấm Đã nhớ hai lần, cách nhau khoảng 10 phút, rồi mới sang lịch ôn theo ngày; thẻ mới mà bạn nhớ ngay từ lần đầu thì hôm sau ôn lại. Dưới mỗi nút có ghi lần gặp lại tiếp theo.</p>
+      <p>Khi ôn và học thẻ theo lịch (Học hôm nay, các ngày học, <b>Luyện tập flashcards</b> của một bộ), lật thẻ rồi tự chấm: <b style="color:var(--again)">Quên</b> (học lại sau 1 phút) · <b style="color:var(--hard)">Khó</b> · <b style="color:var(--good)">Nhớ</b> · <b style="color:var(--easy)">Dễ</b>. Nhớ càng tốt, thẻ càng lâu mới quay lại (1 → 3 → 8 → 20 ngày…); dưới mỗi nút có ghi lần gặp lại tiếp theo. Thẻ mới bấm Nhớ thì gặp lại sau 10 phút rồi mới sang lịch ôn theo ngày; bấm Dễ thì sang thẳng lịch ôn 4 ngày. Thẻ đã thuộc chắc thì bấm <b>Đã biết</b> để bỏ khỏi lịch ôn. Luyện tập nhiều bộ, Kiểm tra 100 từ và các bài luyện ở trang Luyện tập chỉ có hai nút <b style="color:var(--hard)">Đang học</b> (thẻ quay lại trong lượt) và <b style="color:var(--good)">Đã nhớ</b>.</p>
       <p>Mỗi ngày: làm hết thẻ ôn đến hạn và phần từ mới theo lịch (số từ mỗi ngày tùy mục tiêu bạn chọn ở Lịch học). Ngày thứ 7 mỗi tuần ôn lại cả tuần; ngày áp chót luyện cặp tự/tha động từ; ngày cuối kiểm tra 100 từ. Bị chậm thì dùng “Xếp lại lịch từ hôm nay”.</p>
       <p><b>Thẻ đọc chữ Hán (漢→あ)</b>: khi đã nhớ cách đọc một từ được 3 ngày, ứng dụng mở thêm thẻ ngược. Nhìn chữ Hán, gõ cách đọc bằng romaji (vd <i>goukaku</i>) hoặc kana. Ứng dụng tô chỗ sai và gọi tên lỗi (trường âm, âm ngắt っ, âm đục, âm ghép) — đúng các bẫy của phần 漢字読み.</p>
       <p><b>Trắc nghiệm từ vựng</b> (trang Luyện tập): 20 câu trộn 4 dạng từ các từ bạn đã học, có giải thích; từ làm sai tự quay lại lịch học. <b>Từ hay quên</b>: thẻ đã vào lịch ôn mà phải học lại từ 3 lần được gom lại để ôn riêng — hãy bấm <b>Thêm mẹo nhớ</b> ở mặt sau để ghi liên tưởng của riêng bạn.</p>
@@ -3804,12 +3819,12 @@ function viewSettings() {
       <p><b>Trang Học</b>: bộ thẻ theo kỹ năng — ${LEVEL === 'n4' ? 'Từ vựng (25 bài, bài 26 đến 50), Ngữ pháp (25 bài, 95 mẫu).' : 'Từ vựng (24 nhóm Mimikara, 21 chủ đề và 8 nhóm loại từ theo dàn bài Shinkanzen), Ngữ pháp (10 Unit Mimikara + kính ngữ, 12 bài + 8 bài ôn theo dàn bài Shinkanzen).'} Thẻ dùng chung giữa các bộ nên học ở bộ nào cũng được tính. Mở một bộ để <b>Luyện tập flashcards</b> (ôn thẻ đến hạn + tối đa ${deckNewLimit()} thẻ mới mỗi lần) hoặc <b>Xem ngẫu nhiên</b> cả bộ (không ảnh hưởng lịch ôn). <b>Dừng học bộ này</b> xóa tiến độ của riêng bộ đó.</p>
       <p><b>Thẻ ngữ pháp</b>: mặt trước mặc định là mẫu câu và một câu ví dụ — tự nhớ ý nghĩa và cách nối rồi lật để xem cách nối (接続), ý nghĩa (意味), các câu ví dụ có furigana và lưu ý. Thẻ ngữ pháp đến hạn được ôn chung trong “Học hôm nay”.</p>
       <p><b>Luyện tập nhiều bộ</b>: gộp thẻ cần ôn của các bộ đã chọn và trộn ngẫu nhiên; lật thẻ rồi bấm <b>Đã nhớ</b> (thẻ xong, bỏ khỏi lượt này) hoặc <b>Đang học</b> (thẻ quay lại, xen ngẫu nhiên giữa các thẻ chưa ôn). Lịch ôn của thẻ được cập nhật theo câu trả lời.</p>
-      <p><b>Bỏ thẻ khỏi lịch ôn</b>: với từ hoặc mẫu bạn đã thuộc chắc, mở thẻ đó (bấm vào nó trong danh sách của bộ thẻ hoặc trong ô tìm kiếm) rồi bấm <b>Bỏ khỏi lịch ôn</b>. Xem lại hoặc đưa về lịch ôn trong Học › Của tôi › Thẻ đã bỏ qua.</p>
+      <p><b>Bỏ thẻ khỏi lịch ôn</b>: với từ hoặc mẫu bạn đã thuộc chắc, khi ôn theo lịch hãy lật thẻ rồi bấm <b>Đã biết</b> (phím <kbd>5</kbd>); hoặc mở thẻ đó (bấm vào nó trong danh sách của bộ thẻ hoặc trong ô tìm kiếm) rồi bấm <b>Bỏ khỏi lịch ôn</b>. Với từ vựng, thẻ đọc chữ Hán của từ đó cũng được bỏ. Xem lại hoặc đưa về lịch ôn trong Học › Của tôi › Thẻ đã bỏ qua.</p>
       <p><b>Sửa từ vựng</b>: mở một từ (bấm vào từ trong danh sách, trong bộ thẻ hoặc ô Tra cứu) rồi bấm <b>Sửa</b>; khi đang học hoặc xem ngẫu nhiên, lật thẻ rồi bấm nút bút chì trên dải màu (khi đang học có thể bấm phím <kbd>E</kbd>). Sửa được từ, cách đọc, từ loại, trợ từ, Hán Việt, nghĩa và cụm từ; từ chuyên ngành sửa được cả phần giải thích và ghi chú. Thay đổi chỉ áp dụng cho tài khoản của bạn và đồng bộ sang các máy bạn đăng nhập; bản gốc vẫn giữ, bấm <b>Về bản gốc</b> để bỏ thay đổi. Các từ đã sửa có trong Học › Của tôi › Từ đã sửa.</p>
       <p><b>Tài khoản học viên</b>: mỗi người đăng nhập bằng tên đăng nhập + mật khẩu của mình nên tiến độ không lẫn vào nhau; học trên máy nào cũng tiếp tục được. Dùng chung máy thì nhớ <b>Đăng xuất</b> sau khi học.</p>
       <p><b>Ký hiệu trong cách nối (接続)</b>: ${ctTok('V', '', false, '')} động từ (${ctTok('V', '', false, 'る')} thể từ điển, ${ctTok('V', '', false, 'た')}, ${ctTok('V', '', false, 'て')}, ${ctTok('V', '', false, 'ない')}…), ${ctTok('A', '', false, 'い')} tính từ đuôi い, ${ctTok('A', '', false, 'な')} tính từ đuôi な, ${ctTok('N', '', false, '')} danh từ. Phần gạch ngang là phần bỏ đi: ${ctTok('V', '', true, 'ます')} = bỏ ます (<span lang="ja"><ruby>書<rt>か</rt></ruby>きます → <ruby>書<rt>か</rt></ruby>き</span>), ${ctTok('A', '', true, 'い')} = bỏ い. Chữ màu nâu là mẫu ngữ pháp; mỗi dòng là một cách nối, ①② là cách nối riêng của từng nghĩa. Rê chuột (hoặc giữ ngón tay) lên ký hiệu để xem tên đầy đủ.</p>
       <p><b>Cài ứng dụng</b>: trên trang web của nhóm, bấm <b>Cài ứng dụng</b> (trang Hôm nay hoặc Cài đặt › Cài ứng dụng) để cài ${APP_NAME} lên điện thoại hoặc máy tính, không cần kho ứng dụng. Máy tính Windows còn có <b>bộ cài</b> để cài như phần mềm thông thường (nút <b>Tải bộ cài Windows</b>). Ứng dụng đã cài bắt buộc đăng nhập; mọi tiến độ được lưu vào máy chủ của nhóm.</p>
-      <div class="keys"><kbd>Space</kbd><span>Lật thẻ (hoặc chạm vào thẻ)</span><kbd>1 · 2</kbd><span>Đang học · Đã nhớ (hoặc <kbd>←</kbd> <kbd>→</kbd>)</span><kbd>1–4</kbd><span>Chọn đáp án khi luyện đề</span><kbd>Enter</kbd><span>Kiểm tra cách đọc đã gõ · câu tiếp khi luyện đề</span><kbd>Z</kbd><span>Hoàn tác thẻ vừa chấm</span><kbd>Esc</kbd><span>Thoát phiên học</span><kbd>← →</kbd><span>Xem ngẫu nhiên: thẻ trước / sau (hoặc A / D) · <kbd>↑</kbd> <kbd>↓</kbd> biết / chưa biết (Z / X) · <kbd>C</kbd> đánh dấu · <kbd>P</kbd> tự phát</span></div>
+      <div class="keys"><kbd>Space</kbd><span>Lật thẻ (hoặc chạm vào thẻ)</span><kbd>1–4</kbd><span>Quên · Khó · Nhớ · Dễ khi ôn theo lịch (<kbd>←</kbd> Quên, <kbd>→</kbd> Nhớ) · chọn đáp án khi luyện đề</span><kbd>5</kbd><span>Đã biết — bỏ thẻ khỏi lịch ôn</span><kbd>1 · 2</kbd><span>Đang học · Đã nhớ khi luyện tập nhiều bộ, kiểm tra 100 từ, luyện tập (hoặc <kbd>←</kbd> <kbd>→</kbd>)</span><kbd>Enter</kbd><span>Kiểm tra cách đọc đã gõ · câu tiếp khi luyện đề</span><kbd>Z</kbd><span>Hoàn tác thẻ vừa chấm</span><kbd>Esc</kbd><span>Thoát phiên học</span><kbd>← →</kbd><span>Xem ngẫu nhiên: thẻ trước / sau (hoặc A / D) · <kbd>↑</kbd> <kbd>↓</kbd> biết / chưa biết (Z / X) · <kbd>C</kbd> đánh dấu · <kbd>P</kbd> tự phát</span></div>
     </div></details>
     <details class="panel fold" id="foldVer"><summary>${ic('layers')} Phiên bản<span class="aside">v${APP_VER} · ${BUILD.split('-').reverse().join('/')}</span></summary><div class="fold-b">
       <div class="vbox"><span class="vbig">v${APP_VER}</span><span class="small muted">${esc(FILE_NAME)}<br>Cập nhật ${BUILD.split('-').reverse().join('/')}</span></div>
@@ -3995,7 +4010,6 @@ function cardHtml(w) {
     <section class="face back" aria-hidden="${!fl}">${bandHtml(w, wEditBtn(w.id, 'ses'))}<div class="b-body">${kc ? `<div id="kRes">${SES.typed ? kResHtml(w) : ''}</div>` : ''}${backHtml(w, vBackKeys(kc || listen))}</div></section></div></div>`;
 }
 function rateSubs() {
-  if (SES.mode === 'srs') { const c = getCard(SES.cur); return ['gặp lại sau ' + previewLabel(c, 1), 'ôn lại sau ' + previewLabel(c, 3)]; }
   if (SES.mode === 'multi') return ['gặp lại ngẫu nhiên', 'xong, bỏ khỏi lượt này'];
   if (SES.mode === 'test') return ['tính là sai', 'tính là đúng'];
   return ['gặp lại trong phiên', 'xong thẻ này'];
@@ -4003,10 +4017,20 @@ function rateSubs() {
 function controlsHtml() {
   const faces = wide => `<button class="btn faces-btn${wide ? '' : ' ico'}" data-act="faces" title="Chọn nội dung hiện ở mặt trước và mặt sau">${ic('faces')}<span>Mặt thẻ</span></button>`;
   if (!SES.revealed) return `<div class="s-ctl-in pre">${faces(false)}<button class="btn flip-main" data-act="flip">${ic('flip')} Lật thẻ <kbd>Space</kbd></button></div>`;
-  const ty = SES.typed, sg = ty ? (ty.ok ? 3 : 1) : 0, [sa, sb] = rateSubs();
-  const rates = `<div class="rates two"><button class="rate r2${sg === 1 ? ' sugg' : ''}" data-act="rate" data-r="1"><b>${RLABEL[1]}</b><small>${sa}</small><kbd>1</kbd></button><button class="rate r3${sg === 3 ? ' sugg' : ''}" data-act="rate" data-r="3"><b>${RLABEL[3]}</b><small>${sb}</small><kbd>2</kbd></button></div>`;
+  const ty = SES.typed, sg = ty ? (ty.ok ? 3 : 1) : 0;
+  const flipSub = `<button class="btn flip-sub" data-act="flip">${ic('flip')} Lật thẻ <span class="fl">${SES.flipped ? '· đang xem mặt sau' : '· đang xem mặt trước'}</span></button>`;
+  if (SES.mode === 'srs') {   // v6.19: Quên · Khó · Nhớ · Dễ with the next visit under each, then Đã biết · Lật thẻ (· a small Mặt thẻ)
+    const c = getCard(SES.cur);
+    const rates = `<div class="rates">${[1, 2, 3, 4].map(r => `<button class="rate r${r}${r === sg ? ' sugg' : ''}" data-act="rate" data-r="${r}"><b>${RLABEL[r]}</b><small>${previewLabel(c, r)}</small><kbd>${r}</kbd></button>`).join('')}</div>`;
+    const tip = ty ? `<p class="sugg-note">${ty.ok ? 'Gõ đúng — gợi ý chấm <b>Nhớ</b> (hoặc <b>Dễ</b> nếu nhớ ngay).' : 'Gõ chưa đúng — gợi ý chấm <b>Quên</b> để thẻ quay lại sớm.'}</p>` : '';
+    const known = `<button class="btn known-btn" data-act="rate" data-r="5" title="Thẻ đã thuộc chắc: bỏ khỏi lịch ôn (xem lại trong Học › Của tôi › Thẻ đã bỏ qua)">${ic('check')}<span>Đã biết<small> — bỏ khỏi ôn tập</small></span><kbd>5</kbd></button>`;
+    const fsq = `<button class="btn faces-btn sq" data-act="faces" title="Mặt thẻ: chọn nội dung hiện ở mặt trước và mặt sau" aria-label="Mặt thẻ">${ic('faces')}</button>`;
+    return `<div class="s-ctl-in rated">${tip}${rates}<div class="ctl2 k3">${known}${flipSub}${fsq}</div></div>`;
+  }
+  const [sa, sb] = rateSubs();
+  const rates = `<div class="rates two"><button class="rate r2${sg === 1 ? ' sugg' : ''}" data-act="rate" data-r="1"><b>${RLABEL2[1]}</b><small>${sa}</small><kbd>1</kbd></button><button class="rate r3${sg === 3 ? ' sugg' : ''}" data-act="rate" data-r="3"><b>${RLABEL2[3]}</b><small>${sb}</small><kbd>2</kbd></button></div>`;
   const tip = ty ? `<p class="sugg-note">${ty.ok ? 'Gõ đúng — gợi ý chấm <b>Đã nhớ</b>.' : 'Gõ chưa đúng — gợi ý chấm <b>Đang học</b> để thẻ quay lại sớm.'}</p>` : '';
-  return `<div class="s-ctl-in rated">${tip}${rates}<div class="ctl2">${faces(true)}<button class="btn flip-sub" data-act="flip">${ic('flip')} Lật thẻ <span class="fl">${SES.flipped ? '· đang xem mặt sau' : '· đang xem mặt trước'}</span></button></div></div>`;
+  return `<div class="s-ctl-in rated">${tip}${rates}<div class="ctl2">${faces(true)}${flipSub}</div></div>`;
 }
 function renderStudy() {
   if (SES.mode === 'quiz') { renderQuiz(); return; }
@@ -4046,24 +4070,30 @@ function kcheck() {
 }
 function answer(r) {
   if (!SES || !SES.cur || !SES.revealed) return;
-  r = r === 1 ? 1 : 3;   // v6.4: Đang học (1) or Đã nhớ (3)
+  const srs = SES.mode === 'srs';
+  r = srs ? (r >= 1 && r <= 5 ? Math.round(r) : 3) : (r === 1 ? 1 : 3);   // v6.19: srs grades Quên 1 · Khó 2 · Nhớ 3 · Dễ 4 · Đã biết 5; other modes Đang học 1 · Đã nhớ 3
   const id = SES.cur, day = studyDate();
-  SES.hist.push({id, before:S.cards[id] ? S.cards[id].slice() : null, main:SES.main.slice(), learn:SES.learn.slice(), done:SES.done, stats:{...SES.stats}, wrong:SES.wrong.slice(), lapsed:[...SES.lapsed], day, log:S.log[day] ? S.log[day].slice() : null});
+  const sib = srs && r === 5 && !isGram(id) ? (isKCard(id) ? wordOf(id) : kId(id)) : null, sibA = sib && S.cards[sib] ? S.cards[sib].slice() : null;   // Đã biết takes the whole word out: its word card and its kanji card
+  SES.hist.push({id, before:S.cards[id] ? S.cards[id].slice() : null, sib:sibA ? sib : null, sibBefore:sibA, main:SES.main.slice(), learn:SES.learn.slice(), done:SES.done, stats:{...SES.stats}, wrong:SES.wrong.slice(), lapsed:[...SES.lapsed], day, log:S.log[day] ? S.log[day].slice() : null});
   if (SES.hist.length > 40) SES.hist.shift();
   const L = S.log[day] || (S.log[day] = [0, 0, 0, 0]);
   L[3] += Math.min(90, Math.round((now() - SES.shownAt) / 1000));
-  if (SES.mode === 'srs') {
+  if (srs) {
     const c0 = getCard(id), wasNew = !c0 || c0.s === 0, t = now();
-    const n = schedule2(c0 && c0.p === -1 ? Object.assign({}, c0, {p:0}) : c0, r, t, true);
+    const n = r === 5 ? {s:2, d:dueAtDays(MAX_IVL, t), i:MAX_IVL, e:Math.max(c0 ? c0.e : START_EASE, START_EASE), p:-1, r:(c0 ? c0.r : 0) + 1, l:c0 ? c0.l : 0, t:Math.round(t / MIN), f:(c0 && c0.f) || studyDate(t)}   // Đã biết: out of the review queue, listed in Học › Của tôi › Thẻ đã bỏ qua
+      : schedule(c0 && c0.p === -1 ? Object.assign({}, c0, {p:0}) : c0, r, t, true);
     putCard(id, n);
+    if (sibA) skipId(sib);
     if (wasNew) L[0]++; else L[1]++; if (r === 1) L[2]++;
-    SES.main = SES.main.filter(x => x !== id); SES.learn = SES.learn.filter(x => x !== id);
+    const w = wordOf(id), out = r === 5 ? x => x === id || wordOf(x) === w : x => x === id;
+    SES.main = SES.main.filter(x => !out(x)); SES.learn = SES.learn.filter(x => !out(x));
     if (n.s === 1 || n.s === 3) SES.learn.push(id); else SES.done++;
     SES.stats[r] = (SES.stats[r] || 0) + 1;
+    if (r === 5) toast('Đã bỏ thẻ khỏi lịch ôn — nhầm thì bấm Hoàn tác (Z)');
   } else if (SES.mode === 'multi') {
     // Đã nhớ (r = 3): the card leaves this round. Đang học (r = 1): it comes back at a random place among the cards not reviewed yet.
     const c0 = getCard(id);
-    if (c0) putCard(id, schedule(c0.p === -1 ? Object.assign({}, c0, {p:0}) : c0, r, now(), true));
+    if (c0) putCard(id, schedule2(c0.p === -1 ? Object.assign({}, c0, {p:0}) : c0, r, now(), true));
     L[1]++;
     SES.main = SES.main.filter(x => x !== id);
     if (r === 1) {
@@ -4088,6 +4118,7 @@ function answer(r) {
 function undo() {
   if (!SES || SES.mode === 'quiz') return; const h = SES.hist.pop(); if (!h) return;
   if (h.before) S.cards[h.id] = h.before; else delete S.cards[h.id];
+  if (h.sib && h.sibBefore) S.cards[h.sib] = h.sibBefore;   // Đã biết also took the other card of the word out
   if (h.log) S.log[h.day] = h.log; else delete S.log[h.day];
   Object.assign(SES, {main:h.main, learn:h.learn, done:h.done, stats:h.stats, wrong:h.wrong, finished:false, saved:SES.saved});
   SES.lapsed = new Set(h.lapsed);
@@ -4111,7 +4142,7 @@ function endHtml() {
     const n = SES.done, f = SES.wrong.length;
     return `<div class="done"><div class="medal-d">${daruma(2)}</div><h2>Đã ôn xong!</h2><p>${n} thẻ trong ${mins} phút. ${f ? `${f} thẻ bạn bấm Đang học đã được ôn lại ngay trong lượt.` : 'Thẻ nào bạn cũng nhớ.'} Lịch ôn đã được cập nhật.</p><div class="dgrid" style="grid-template-columns:repeat(3,1fr);max-width:420px"><div><b style="color:var(--good)">${Math.max(0, n - f)}</b><span>nhớ ngay</span></div><div><b style="color:var(--hard)">${f}</b><span>thẻ chưa nhớ</span></div><div><b>${s[1]}</b><span>lượt Đang học</span></div></div>${wrongChips()}<div class="dacts"><button class="btn btn-pri" data-act="multi">${ic('layers')} Ôn nhiều bộ lần nữa</button><button class="btn btn-sec" data-act="exit">Về trang chính</button></div></div>`;
   }
-  const grid = SES.mode === 'srs' ? `<div class="dgrid" style="grid-template-columns:repeat(2,1fr);max-width:340px"><div><b style="color:var(--good)">${s[3]}</b><span>lượt Đã nhớ</span></div><div><b style="color:var(--hard)">${s[1]}</b><span>lượt Đang học</span></div></div>` : `<div class="dgrid" style="grid-template-columns:repeat(3,1fr);max-width:400px"><div><b>${SES.done}</b><span>thẻ</span></div><div><b style="color:var(--hard)">${SES.wrong.length}</b><span>thẻ chưa nhớ</span></div><div><b>${mins}</b><span>phút</span></div></div>`;
+  const grid = SES.mode === 'srs' ? `<div class="dgrid"><div><b style="color:var(--again)">${s[1]}</b><span>Quên</span></div><div><b style="color:var(--hard)">${s[2]}</b><span>Khó</span></div><div><b style="color:var(--good)">${s[3]}</b><span>Nhớ</span></div><div><b style="color:var(--easy)">${s[4]}</b><span>Dễ</span></div></div>` : `<div class="dgrid" style="grid-template-columns:repeat(3,1fr);max-width:400px"><div><b>${SES.done}</b><span>thẻ</span></div><div><b style="color:var(--hard)">${SES.wrong.length}</b><span>thẻ chưa nhớ</span></div><div><b>${mins}</b><span>phút</span></div></div>`;
   let next = '';
   if (SES.deck) {
     const d = deckById(SES.deck), dq = d ? deckQueue(d) : null, more = dq ? dq.rev.length + dq.learn.length + Math.min(deckNewLimit(), dq.neu.length) : 0;
@@ -4122,7 +4153,7 @@ function endHtml() {
     if (behind.length) next += `<button class="btn btn-pri" data-act="batch" data-b="${behind[0].b}">${ic('play')} Học bù Ngày ${behind[0].d} (${behind[0].n} từ)</button>`;
     else if (ahead && !todayNewIds().length) next += `<button class="btn btn-sec" data-act="batch" data-b="${ahead.b}">${ic('bolt')} Học trước Ngày ${ahead.d}</button>`;
   } else if (SES.wrong.length) next += `<button class="btn btn-pri" data-act="practice" data-k="redo">${ic('layers')} Luyện lại ${SES.wrong.length} thẻ chưa nhớ</button>`;
-  return `<div class="done"><div class="medal-d">${daruma(2)}</div><h2>${SES.mode === 'srs' ? 'Xong phiên học!' : 'Hoàn thành luyện tập!'}</h2><p>${SES.mode === 'srs' ? `Bạn đã trả lời ${s[1] + s[3]} lượt trong ${mins} phút. Lịch ôn đã được cập nhật.` : 'Thẻ bạn bấm Đang học sẽ được đưa vào lịch học lại.'}</p>${grid}${SES.mode !== 'srs' ? wrongChips() : ''}<div class="dacts">${next}<button class="btn btn-sec" data-act="exit">${SES.deck ? 'Về bộ thẻ' : 'Về trang chính'}</button></div></div>`;
+  return `<div class="done"><div class="medal-d">${daruma(2)}</div><h2>${SES.mode === 'srs' ? 'Xong phiên học!' : 'Hoàn thành luyện tập!'}</h2><p>${SES.mode === 'srs' ? `Bạn đã trả lời ${s[1] + s[2] + s[3] + s[4] + (s[5] || 0)} lượt trong ${mins} phút${s[5] ? ` (${s[5]} thẻ “Đã biết” được bỏ khỏi lịch ôn)` : ''}. Lịch ôn đã được cập nhật.` : 'Thẻ bạn bấm Đang học sẽ được đưa vào lịch học lại.'}</p>${grid}${SES.mode !== 'srs' ? wrongChips() : ''}<div class="dacts">${next}<button class="btn btn-sec" data-act="exit">${SES.deck ? 'Về bộ thẻ' : 'Về trang chính'}</button></div></div>`;
 }
 function wrongChips() { if (!SES.wrong.length) return ''; return `<div class="wchips" style="justify-content:center;max-width:560px">${SES.wrong.map(id => { if (isGram(id)) { const g = GRAM.get(id); return `<button class="wchip s-learn" data-act="gram" data-id="${id}"><span class="jp">${esc(plainOf(g.t))}</span> <small class="muted">${esc(gMeanPlain(g))}</small></button>`; } const w = WORDS.get(wordOf(id)); return w ? `<button class="wchip s-learn" data-act="word" data-id="${w.id}"><span class="jp">${esc(w.w)}</span>${isKCard(id) ? ' <small class="muted">(đọc chữ Hán)</small>' : ''} <small class="muted">${esc(w.m)}</small></button>` : ''; }).join('')}</div>`; }
 
@@ -4650,7 +4681,7 @@ function viewDeck() {
   const stop = !known && d.id !== 'star' && d.id !== 'edited' && ownL ? `<button class="lnk danger" data-act="deckstop" data-id="${d.id}" data-confirm="Bấm lần nữa để xóa tiến độ ${ownL} thẻ">${ic('trash')} ${d.own ? `Đặt lại ${ownL} thẻ bổ sung của bộ này` : 'Dừng học bộ này'}</button>` : '';
   const sharedNote = shared ? `<p class="small muted" style="margin:8px 0 0">${fmtN(shared)} thẻ trong bộ này dùng chung với giáo trình Mimikara: học ở đâu cũng được tính, và muốn đặt lại thì đặt lại ở bộ Mimikara.</p>` : '';
   const lim2 = UI.deckLimit || 200, rows = d.ids.slice(0, lim2).map(id => isGram(id) ? gRowHtml(id) : WORDS.has(wordOf(id)) ? rowHtml(wordOf(id)) : '').join('');
-  const empty = d.id === 'star' ? 'Chưa có thẻ nào. Khi xem ngẫu nhiên, bấm ☆ (phím C) để đánh dấu thẻ cần chú ý.' : known ? 'Chưa có thẻ nào. Với từ hoặc mẫu đã thuộc chắc, mở thẻ đó trong danh sách của bộ thẻ rồi bấm “Bỏ khỏi lịch ôn”.' : d.id === 'edited' ? 'Chưa có từ nào. Mở một từ (trong danh sách hoặc ô Tra cứu) rồi bấm Sửa; khi đang học, lật thẻ rồi bấm nút bút chì.' : d.id === 'mine' ? 'Chưa có từ nào — bấm Thêm từ để tự thêm.' : 'Bộ này chưa có thẻ.';
+  const empty = d.id === 'star' ? 'Chưa có thẻ nào. Khi xem ngẫu nhiên, bấm ☆ (phím C) để đánh dấu thẻ cần chú ý.' : known ? 'Chưa có thẻ nào. Khi ôn theo lịch, lật thẻ rồi bấm “Đã biết” với thẻ đã thuộc chắc; hoặc mở thẻ trong danh sách của bộ thẻ rồi bấm “Bỏ khỏi lịch ôn”.' : d.id === 'edited' ? 'Chưa có từ nào. Mở một từ (trong danh sách hoặc ô Tra cứu) rồi bấm Sửa; khi đang học, lật thẻ rồi bấm nút bút chì.' : d.id === 'mine' ? 'Chưa có từ nào — bấm Thêm từ để tự thêm.' : 'Bộ này chưa có thẻ.';
   return `<nav class="crumb" aria-label="Vị trí">${d.book === 'cnf' ? `<button data-act="go" data-view="cn">${ic('left')} Chuyên ngành</button>` : `<button data-act="libtab" data-k="${d.book === 'my' ? 'm' : d.kind === 'g' ? 'g' : 'v'}"${d.book === 'my' ? '' : ` data-b="${d.own ? 'sk' : 'mm'}"`}>${ic('left')} Học</button>`}<span aria-hidden="true">›</span><span>${esc(BOOKS[d.book].name)}</span></nav>
     <section class="dkhero ${d.wk}"><div><h1>${esc(d.title)}</h1><p class="dsub">${esc(d.sub || '')}</p></div>
       ${acts ? `<div class="dkacts">${acts}</div>` : ''}
@@ -4962,7 +4993,7 @@ function catchPanel() {
   const nv = bv.reduce((s, x) => s + x.n, 0), ng = bg.reduce((s, x) => s + x.n, 0), nd = new Set([...bv, ...bg].map(x => x.d)).size;
   const sv = bv.slice(0, 8), sg = bg.slice(0, 6);
   const what = [nv ? fmtN(nv) + ' từ' : '', ng ? fmtN(ng) + ' mẫu ngữ pháp' : ''].filter(Boolean).join(' và ');
-  return `<section class="catch"><h3>${ic('clock')} Học bù · ${nd} ngày còn ${what} chưa học</h3><div class="chips">${sv.map(x => { const b = P.batches[x.b]; return `<button class="gchip ${b.groups.length ? wkClass(b.groups[0]) : ''}" data-act="batch" data-b="${x.b}"><i></i>Ngày ${x.d} · ${esc(batchTitle(b))} <em>${x.n} từ</em></button>`; }).join('')}${sg.map(x => { const b = P.gbatches[x.b]; return `<button class="gchip wk-5" data-act="gbatch" data-b="${x.b}"><i></i>Ngày ${x.d} · ${esc(gTitle(b))} <em>${x.n} mẫu</em></button>`; }).join('')}${bv.length + bg.length > sv.length + sg.length ? `<span class="small muted" style="align-self:center">+${bv.length + bg.length - sv.length - sg.length} phần nữa</span>` : ''}</div><div class="catch-foot"><p class="small muted" style="margin:0">Thẻ đã thuộc thì bấm <b>Đã nhớ</b> ngay lần đầu: thẻ sang thẳng lịch ôn, hôm sau mới gặp lại. Chậm nhiều thì xếp lại lịch: chia đều phần còn lại từ hôm nay.</p><button class="btn btn-sec btn-sm" data-act="goaledit">${ic('target')} Xếp lại lịch từ hôm nay</button></div></section>`;
+  return `<section class="catch"><h3>${ic('clock')} Học bù · ${nd} ngày còn ${what} chưa học</h3><div class="chips">${sv.map(x => { const b = P.batches[x.b]; return `<button class="gchip ${b.groups.length ? wkClass(b.groups[0]) : ''}" data-act="batch" data-b="${x.b}"><i></i>Ngày ${x.d} · ${esc(batchTitle(b))} <em>${x.n} từ</em></button>`; }).join('')}${sg.map(x => { const b = P.gbatches[x.b]; return `<button class="gchip wk-5" data-act="gbatch" data-b="${x.b}"><i></i>Ngày ${x.d} · ${esc(gTitle(b))} <em>${x.n} mẫu</em></button>`; }).join('')}${bv.length + bg.length > sv.length + sg.length ? `<span class="small muted" style="align-self:center">+${bv.length + bg.length - sv.length - sg.length} phần nữa</span>` : ''}</div><div class="catch-foot"><p class="small muted" style="margin:0">Từ đã thuộc thì bấm <b>Dễ</b> để chuyển nhanh sang lịch ôn 4 ngày, hoặc <b>Đã biết</b> để bỏ khỏi lịch ôn. Chậm nhiều thì xếp lại lịch: chia đều phần còn lại từ hôm nay.</p><button class="btn btn-sec btn-sm" data-act="goaledit">${ic('target')} Xếp lại lịch từ hôm nay</button></div></section>`;
 }
 function viewToday() {
   const P = plan(), N = P.N, d = planDay(), today = studyDate(), p = dayInfo(d);
@@ -5698,7 +5729,10 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') { exitStudy(); return; }
   if (e.key === 'z' || e.key === 'Z') { e.preventDefault(); undo(); return; }
   if ((e.key === 'e' || e.key === 'E') && SES.cur && !isGram(SES.cur) && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); openEditWord(SES.cur, 'ses'); return; }
-  if ((/^[1-4]$/.test(e.key) || e.key === 'ArrowLeft' || e.key === 'ArrowRight') && SES.cur && SES.revealed && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); answer(e.key === '1' || e.key === 'ArrowLeft' ? 1 : 3); }   // v6.4: 1 or ← Đang học, 2 or → Đã nhớ (3 and 4, the old Nhớ and Dễ, still mean Đã nhớ)
+  if (SES.cur && SES.revealed && !e.ctrlKey && !e.metaKey && !e.altKey) {
+    if (SES.mode === 'srs' && /^[1-5]$/.test(e.key)) { e.preventDefault(); answer(+e.key); return; }   // v6.19: 1 Quên · 2 Khó · 3 Nhớ · 4 Dễ · 5 Đã biết (← Quên, → Nhớ below)
+    if (/^[1-4]$/.test(e.key) || e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); answer(e.key === '1' || e.key === 'ArrowLeft' ? 1 : 3); }   // other modes: 1 or ← Đang học, 2 or → Đã nhớ
+  }
 });
 document.addEventListener('pointerover', e => { const el = e.target.closest && e.target.closest('[data-tip]'); if (el) showTip(el); else hideTip(); });
 document.addEventListener('focusin', e => { const el = e.target.closest && e.target.closest('[data-tip]'); if (el) showTip(el); else hideTip(); });
