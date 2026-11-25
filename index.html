@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="google-site-verification" content="le9jQVmBJsoRbnAlUqIXqvBY6fw5QW9MPQTZ9NMIPzM">
 <link rel="manifest" href="manifest.webmanifest">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Daruma N3", "alternateName": ["Daruma N4", "N3 Nihongo Go", "MIMIKARA N3 Flashcard"], "url": "https://tranhuutai1803-cloud.github.io/", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "inLanguage": ["vi", "ja"], "description": "Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.", "softwareVersion": "6.17", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "VND"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Daruma N3", "alternateName": ["Daruma N4", "N3 Nihongo Go", "MIMIKARA N3 Flashcard"], "url": "https://tranhuutai1803-cloud.github.io/", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "inLanguage": ["vi", "ja"], "description": "Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.", "softwareVersion": "6.18", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "VND"}}</script>
 <script>window.MMK_SERVER = "https://script.google.com/macros/s/AKfycbxplbNcR2JKVCaU0STY8ZG1f55cYr7YzoacVLbtRZrfuSxj7m7t16ZOMFjCPZcwNleAQw/exec";</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -643,6 +643,16 @@ rt{font-size:.48em;color:var(--muted);font-weight:400;letter-spacing:-.02em;font
 .mbox .band{position:sticky;top:0;z-index:1;padding-right:6px}
 .mbox .band .icon-btn{color:#fff;width:34px;height:34px;margin-left:4px}
 .mbox .band .icon-btn:hover{background:rgba(255,255,255,.15)}
+.band .bedit{color:#fff;width:34px;height:34px;margin:-6px -8px -6px 4px}
+.band .bedit:hover{background:rgba(255,255,255,.16)}
+.band .bedit .ic{width:18px;height:18px}
+.wed{font-size:12px;font-weight:700;color:var(--pri);border:1.5px solid currentColor;border-radius:999px;padding:0 9px;line-height:1.7;white-space:nowrap}
+.wednote{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 16px 0;padding:8px 12px;border-radius:12px;background:var(--surface-2);font-size:14px;color:var(--ink-2)}
+.wednote > .ic{width:17px;height:17px;color:var(--pri);flex:none}
+.wednote .lnk{margin-left:auto}
+.hint.was{font-style:italic}
+.wedit .mh .jp{font-weight:600}
+.wedit textarea{min-height:72px}
 .mbox .b-body{background:var(--card)}
 .srsinfo{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 22px 4px}
 .srsinfo div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 10px}
@@ -1535,7 +1545,7 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
 <noscript><div style="max-width:640px;margin:40px auto;padding:0 16px;font:16px/1.6 system-ui;color:#eee"><h1>Daruma N3</h1><p>Daruma N3: ứng dụng miễn phí học JLPT bằng tiếng Việt, tách riêng hai trình độ N4 và N3 (bấm chọn trình độ cần học). Thời khóa biểu mỗi ngày; N3 có 1.161 từ vựng và 164 thẻ ngữ pháp (theo Mimikara và dàn bài Shinkanzen), N4 có 791 từ vựng và 95 thẻ ngữ pháp xếp theo thứ tự 25 bài 26–50. Đọc hiểu N3 học kèm sách Shinkanzen (72 bài: từ vựng, ngữ pháp, đáp án và giải thích). Chọn giáo trình và số ngày để lên lịch học; flashcard lặp lại ngắt quãng, Hán Việt, furigana, thẻ chữ Hán, trắc nghiệm từ vựng và ngữ pháp. Học trên điện thoại hoặc máy tính, có tài khoản để đồng bộ tiến độ.</p><p>Hãy bật JavaScript để dùng ứng dụng.</p></div></noscript>
 <div id="app">
   <aside class="side" id="side">
-    <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.17</em></small></span></button>
+    <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.18</em></small></span></button>
     <div class="lvsw" id="lvSide" role="group" aria-label="Chọn trình độ học"><button type="button" data-act="lv" data-lv="n4" aria-pressed="false"><b>N4</b><small>Sơ cấp</small></button><button type="button" data-act="lv" data-lv="n3" aria-pressed="true"><b>N3</b><small>Trung cấp</small></button></div>
     <nav class="tabs" id="tabs" aria-label="Điều hướng"></nav>
     <div class="side-foot" id="sideFoot"></div>
@@ -1543,7 +1553,7 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
   <div class="page">
     <header class="top">
       <div class="wrap top-in">
-        <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.17</em></small></span></button>
+        <button class="brand" data-act="go" data-view="today" aria-label="Daruma N3 — về trang Hôm nay"><span class="seal" aria-hidden="true"><svg class="daruma" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C16 4 6 16.5 6 33c0 16 10.5 27 26 27s26-11 26-27C58 16.5 48 4 32 4z" fill="#d3311f"/><path d="M32 60c-9.4 0-17-3.9-21.6-10.4C16.6 53.6 24 55.6 32 55.6s15.4-2 21.6-6C49 56.1 41.4 60 32 60z" fill="#000" opacity=".18"/><path d="M32 12.5c-11.2 0-19 6.7-19 16S20.8 43.5 32 43.5s19-5.7 19-15-7.8-16-19-16z" fill="#f6e3c5"/><path d="M16 20.2c3.2-3.4 8.4-4 12-1.3M48 20.2c-3.2-3.4-8.4-4-12-1.3" fill="none" stroke="#1d1a22" stroke-width="2.5" stroke-linecap="round"/><circle cx="23.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27" r="6.4" fill="#fffaf0" stroke="#1d1a22" stroke-width="1.3"/><circle cx="40.5" cy="27.4" r="3.6" fill="#1d1a22"/><path d="M32 30v4M27.2 38c3.2 1.7 6.4 1.7 9.6 0M17.5 33.5c2.4 2.3 5 3 7.6 2.5M46.5 33.5c-2.4 2.3-5 3-7.6 2.5" fill="none" stroke="#1d1a22" stroke-width="1.7" stroke-linecap="round"/><path d="M21 48.5c3.4-2.2 7-3.3 11-3.3s7.6 1.1 11 3.3M27 51.5v4.5M32 50.5v6M37 51.5v4.5" fill="none" stroke="#f0c04a" stroke-width="2" stroke-linecap="round"/></svg></span><span><b>Daruma N3</b><small>Học JLPT N3 mỗi ngày <em class="ver">v6.18</em></small></span></button>
         <button class="srch" data-act="search" aria-label="Tra cứu từ vựng, ngữ pháp"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span>Tra từ, chữ Hán, ngữ pháp…</span><kbd>/</kbd></button>
         <div class="tright"><button class="lvpill" id="lvTop" type="button" data-act="lvopen" aria-haspopup="dialog" aria-label="Chọn trình độ: đang học N3"><span id="lvTopT">N3</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button><button class="acctbtn reg" id="regBtn" data-act="register" hidden>Đăng ký</button><button class="acctbtn" id="acctBtn" data-act="acct" hidden></button><button class="sync" id="sync" data-act="go" data-view="settings" data-s="connecting" aria-label="Trạng thái lưu dữ liệu"></button></div>
       </div>
@@ -1564,11 +1574,15 @@ body.gate .lvpill,body.gate .lvsw,body.one-level .lvpill,body.one-level .lvsw{di
 (() => {
 'use strict';
 /* ================= App identity ================= */
-const APP_VER = '6.17', BUILD = '2026-11-24', FILE_NAME = 'MIMIKARA_N3_Flashcard_v6.17_2026-11-24';
+const APP_VER = '6.18', BUILD = '2026-11-25', FILE_NAME = 'MIMIKARA_N3_Flashcard_v6.18_2026-11-25';
 const WEB_URL = 'https:\/\/tranhuutai1803-cloud.github.io\/';   // public site of the group (accounts live there)
 const APP_NAME = 'Daruma N3';
 const SCHEMA = 1, LS_KEY = 'mimikara-n3-flashcard', LS_UI = 'mimikara-n3-flashcard-ui';
 const CHANGELOG = [
+  {v:'6.18', d:'25/11/2026', s:'Sửa từ vựng: đổi nghĩa, cách đọc, Hán Việt, cụm từ… của bất kỳ từ nào', t:[
+    'Mở một từ rồi bấm Sửa, hoặc khi đang học lật thẻ rồi bấm nút bút chì trên dải màu (phím E); Xem ngẫu nhiên cũng có nút này. Sửa được từ, cách đọc, từ loại, trợ từ, Hán Việt, nghĩa, cụm từ; từ chuyên ngành sửa được cả giải thích và ghi chú. Từ của tôi cũng sửa trong cùng hộp này.',
+    'Thay đổi lưu theo tài khoản và đồng bộ sang mọi máy; thẻ, danh sách, tra cứu, trắc nghiệm đều dùng nội dung đã sửa. Từ đã sửa có nhãn “Đã sửa”, hiện “Gốc: …” cạnh ô đã đổi, bấm Về bản gốc để quay lại; danh sách ở Học › Của tôi › Từ đã sửa.'
+  ]},
   {v:'6.17', d:'24/11/2026', s:'Bộ cài Windows: cài Daruma N3 như phần mềm thông thường', t:[
     'Máy tính Windows 10, 11 (64-bit): tải bộ cài Daruma-N3-Setup.exe (Cài đặt › Cài ứng dụng, hoặc dải Cài ứng dụng ở trang Hôm nay), bấm Tiếp → Cài đặt → Hoàn tất. Có biểu tượng trên màn hình nền và menu Start, mở trong cửa sổ riêng như Word, Excel; gỡ trong Cài đặt Windows › Ứng dụng.',
     'Chương trình tải bài học từ trang web nên tự cập nhật mỗi lần mở khi có mạng, không phải cài lại; sau lần mở đầu tiên vẫn mở được khi mất mạng. Bản cài bắt buộc đăng nhập, mọi tiến độ lưu vào máy chủ của nhóm. Liên kết ra ngoài mở bằng trình duyệt; F5 tải lại, F11 toàn màn hình, Ctrl + / Ctrl − phóng to, thu nhỏ.'
@@ -1931,13 +1945,14 @@ const vPre = () => LEVEL === 'n4' ? 'nv' : 'v';
 const WORDS = new Map(), BASE_IDS = [];
 let GROUP_IDS = [], NGROUPS = 0;
 let CUSTOM_IDS = [];
+const ORIG = new Map();   // v6.18: the course values of the words the learner has edited (see applyEdits)
 const groupOfNo = n => { for (let g = 0; g < NGROUPS; g++) { const [a, b] = LD.chunks[g]; if (n >= a && n <= b) return g; } return 0; };
 let SKZ = {vd:[], w:[], gl:[], g:[], rd:[], tips:[]};
 const SKZ_IDS = [];
 const CN_IDS = [], CN_SET = new Map();   // v6.13: specialised vocabulary, the same for N3 and N4
 const PAIRS = [];
 function loadWords() {
-  WORDS.clear(); BASE_IDS.length = 0; SKZ_IDS.length = 0; PAIRS.length = 0;
+  ORIG.clear(); WORDS.clear(); BASE_IDS.length = 0; SKZ_IDS.length = 0; PAIRS.length = 0;
   NGROUPS = LD.chunks.length; GROUP_IDS = LD.chunks.map(() => []);
   for (const a of LD.words) {
     const g = groupOfNo(a[0]);
@@ -1997,10 +2012,65 @@ function migrate(o) {
 }
 function applyCustom() {
   for (const [id, w] of WORDS) if (w.g === 'u') WORDS.delete(id);
-  const list = Object.values(CW).filter(w => w && !w.del && w.k).sort((a, b) => (a.at || 0) - (b.at || 0));
+  const list = Object.values(CW).filter(w => w && !w.del && w.k && !w.of).sort((a, b) => (a.at || 0) - (b.at || 0));
   list.forEach((w, i) => WORDS.set(w.id, {id:w.id, w:w.w || w.k, k:w.k, pos:w.pos || '', ptc:w.ptc || '', hv:w.hv || '', m:w.m || '', c:Array.isArray(w.c) ? w.c : [], pair:'', no:i + 1, g:'u', base:false, at:w.at}));
   CUSTOM_IDS = list.map(w => w.id);
+  applyEdits();
   HAY.clear(); rebuildIndexes();
+}
+/* v6.18: editing any word. The course words stay as they are; what the learner changes is kept as CW['e' + id] =
+   {id, of:id, fx:{field: value}, at, upd}: synced and merged like own words (newest wins), and with no top-level k, so
+   older versions of the app ignore it. Own words (u…) are changed in place. ORIG holds the course values while an edit shows. */
+const EDIT_F = ['w', 'k', 'pos', 'ptc', 'hv', 'm', 'c', 'ex', 'fix'];
+const EDIT_NAME = {w:'từ', k:'cách đọc', pos:'từ loại', ptc:'trợ từ', hv:'Hán Việt', m:'nghĩa', c:'cụm từ', ex:'giải thích', fix:'ghi chú'};
+const editKey = id => 'e' + id;
+const editOf = id => { const e = CW[editKey(id)]; return e && !e.del && e.of === id && e.fx && typeof e.fx === 'object' ? e : null; };
+const isEdited = id => ORIG.has(id) && !!editOf(id);
+const cloneV = v => v == null ? v : JSON.parse(JSON.stringify(v));
+const pickF = w => { const o = {}; for (const f of EDIT_F) if (w[f] !== undefined) o[f] = cloneV(w[f]); return o; };
+const origOf = w => ORIG.get(w.id) || pickF(w);
+const editedFields = id => { const e = editOf(id); return e ? EDIT_F.filter(f => f in e.fx).map(f => EDIT_NAME[f]).join(', ') : ''; };
+const editedIds = () => Object.values(CW).filter(e => e && !e.del && e.of && e.fx && ORIG.has(e.of)).sort((a, b) => (b.upd || 0) - (a.upd || 0)).map(e => e.of);
+function fixVal(f, v, cur) {   // values come from other devices too: keep the shapes the cards expect
+  if (f === 'c') return Array.isArray(v) ? v.filter(Array.isArray).slice(0, 4).map(x => [String(x[0] || '').slice(0, 300), String(x[1] || '').slice(0, 300)]) : cur;
+  if (f === 'ex') return Array.isArray(v) ? [String(v[0] || '').slice(0, 1500), String(v[1] || '').slice(0, 1500)] : cur;
+  if (typeof v !== 'string' || (f === 'k' && !v)) return cur;
+  return v.slice(0, 600);
+}
+function applyEdits() {
+  for (const [id, o] of ORIG) { const w = WORDS.get(id); if (w) Object.assign(w, cloneV(o)); }
+  ORIG.clear();
+  for (const key in CW) {
+    const e = CW[key]; if (!e || e.del || !e.of || key !== editKey(e.of) || !e.fx || typeof e.fx !== 'object') continue;
+    const w = WORDS.get(e.of); if (!w || w.g === 'u') continue;
+    ORIG.set(w.id, pickF(w));
+    for (const f of EDIT_F) if (Object.prototype.hasOwnProperty.call(e.fx, f)) w[f] = fixVal(f, e.fx[f], w[f]);
+  }
+}
+const normT = s => String(s == null ? '' : s).normalize('NFC').replace(/\r\n?/g, '\n').trim();
+function normF(f, v) {
+  if (f === 'c') return (Array.isArray(v) ? v : []).filter(x => x && (x[0] || x[1])).map(x => [normJ(x[0]), normJ(x[1])]);
+  if (f === 'ex') return Array.isArray(v) ? [normT(v[0]), normT(v[1])] : ['', ''];
+  if (f === 'hv') return normJ(v).toUpperCase();
+  return f === 'm' || f === 'fix' ? normT(v) : normJ(v);
+}
+const sameF = (f, a, b) => JSON.stringify(normF(f, a)) === JSON.stringify(normF(f, b));
+function saveEdit(id, d) {   // true when something changed
+  const w = WORDS.get(id); if (!w) return false;
+  if (w.g === 'u') { const p = CW[id] || {}; if (['w', 'k', 'pos', 'ptc', 'hv', 'm', 'c'].every(f => sameF(f, d[f], p[f]))) return false; saveWord(d, id); return true; }
+  const o = origOf(w), fx = {};
+  for (const f of EDIT_F) if (f in d && !sameF(f, d[f], o[f])) fx[f] = cloneV(d[f]);
+  const key = editKey(id), prev = CW[key], t = now(), had = !!editOf(id);
+  if (!Object.keys(fx).length) { if (!had) return false; CW[key] = {id:key, of:id, del:true, at:prev.at || t, upd:t}; }
+  else { if (had && JSON.stringify(prev.fx) === JSON.stringify(fx)) return false; CW[key] = {id:key, of:id, fx, at:prev && prev.at ? prev.at : t, upd:t}; }
+  applyCustom(); saveLocalSoon(); Sync.putWord(key);
+  return true;
+}
+function revertEdit(id) {
+  const key = editKey(id), prev = CW[key]; if (!editOf(id)) return false;
+  const t = now(); CW[key] = {id:key, of:id, del:true, at:prev.at || t, upd:t};
+  applyCustom(); saveLocalSoon(); Sync.putWord(key);
+  return true;
 }
 const allIds = () => BASE_IDS.concat(SKZ_IDS, CUSTOM_IDS);
 const getCard = id => { const a = S.cards[id]; return a ? {s:a[0], d:a[1], i:a[2], e:a[3], p:a[4], r:a[5], l:a[6], t:a[7], f:a[8]} : null; };
@@ -3088,7 +3158,7 @@ function backHtml(w, keys) {
   const title = has('w') ? `<span class="jp hw ${hCls(w.w)}" lang="ja">${esc(w.w)}</span>${hasK && has('k') ? `<span class="jp hr" lang="ja">${esc(w.k)}</span>` : ''}` : has('k') ? `<span class="jp hw ${hCls(w.k)}" lang="ja">${esc(w.k)}</span>` : '';
   const kp = live && has('rel') ? kanjiPanel(w) : '';
   if (keys && !title && !(has('hv') && w.hv) && !(has('m') && w.m) && !phr.length && !pair && !kp && !(has('pos') && (POS[w.pos] || w.ptc)) && !(has('note') && note)) return backHtml(w, ['w', 'k', 'm'].concat(keys.includes('note') ? ['note'] : []));   // this word has none of the chosen fields
-  const tags = `${sp ? `<button class="speak sm" data-act="speak" data-t="${esc(w.k)}" aria-label="Nghe phát âm" title="Nghe">${ic('speaker')}</button>` : ''}${has('pos') ? posBits(w) + (w.ptc ? `<span class="ptc" title="Trợ từ đi kèm">${esc(w.ptc)}</span>` : '') : ''}`;
+  const tags = `${sp ? `<button class="speak sm" data-act="speak" data-t="${esc(w.k)}" aria-label="Nghe phát âm" title="Nghe">${ic('speaker')}</button>` : ''}${has('pos') ? posBits(w) + (w.ptc ? `<span class="ptc" title="Trợ từ đi kèm">${esc(w.ptc)}</span>` : '') : ''}${live && isEdited(w.id) ? '<span class="wed" title="Bạn đã sửa từ này">Đã sửa</span>' : ''}`;
   return `${title || tags ? `<div class="b-head${title ? '' : ' notitle'}"><div>${title}</div><div class="b-tags">${tags}</div></div>` : ''}
     ${lp >= LEECH ? `<div class="leech">${ic('warn')}<span><b>Từ hay quên</b> · đã quên ${lp} lần.${note && has('note') ? ' Đọc lại mẹo nhớ của bạn bên dưới.' : ' Tự viết một mẹo nhớ sẽ giúp nhớ lâu hơn.'}</span></div>` : ''}
     ${has('hv') && w.hv ? `<div class="kv"><span class="lab">Hán Việt</span><span class="hv">${esc(w.hv)}</span></div>` : ''}
@@ -3456,8 +3526,78 @@ function openWord(id) {
   if (a || S.cards[kId(id)]) acts.push(`<button class="btn btn-ghost btn-sm" data-act="resetcard" data-id="${id}" data-confirm="Bấm lần nữa để đặt lại thẻ">${ic('reset')} Đặt lại thẻ</button>`);
   const kc = hasKanji(w) ? getCard(kId(id)) : null;
   const kinfo = hasKanji(w) ? `<div class="kcinfo">${ic('layers')}<span><b>Thẻ đọc chữ Hán</b> · ${kc ? (kc.s === 2 ? `ôn tiếp ${dmy(studyDate(kc.d * MIN))} · khoảng cách ${fmtIvlDays(kc.i)}${kc.l ? ` · đã quên ${kc.l} lần` : ''}` : 'đang học') : S.settings.kOn ? 'chưa mở — tự mở khi thẻ cách đọc đã nhớ được từ 3 ngày' : 'đang tắt (bật trong Cài đặt)'}</span></div>` : '';
-  if (w.g === 'u') { acts.push(`<button class="btn btn-sec btn-sm" data-act="editword" data-id="${id}">${ic('edit')} Sửa</button>`); acts.push(`<button class="btn btn-danger btn-sm" data-act="delword" data-id="${id}" data-confirm="Bấm lần nữa để xóa">${ic('trash')} Xóa</button>`); }
-  openModal(`<div class="${wkClass(w.g)}">${bandHtml(w, `<button class="icon-btn" data-act="closemodal" aria-label="Đóng">${ic('close')}</button>`)}<div class="b-body">${backHtml(w)}</div>${info}${kinfo}<div class="mact">${acts.join('')}</div></div>`);
+  acts.push(`<button class="btn btn-sec btn-sm" data-act="wedit" data-id="${id}" data-from="word">${ic('edit')} Sửa</button>`);
+  if (w.g === 'u') acts.push(`<button class="btn btn-danger btn-sm" data-act="delword" data-id="${id}" data-confirm="Bấm lần nữa để xóa">${ic('trash')} Xóa</button>`);
+  const edn = isEdited(id) ? `<div class="wednote">${ic('edit')}<span>Bạn đã sửa ${esc(editedFields(id))} của từ này.</span><button class="lnk" data-act="wrevert" data-id="${id}" data-from="word" data-confirm="Bấm lần nữa để về bản gốc">${ic('reset')} Về bản gốc</button></div>` : '';
+  openModal(`<div class="${wkClass(w.g)}">${bandHtml(w, `<button class="icon-btn" data-act="closemodal" aria-label="Đóng">${ic('close')}</button>`)}<div class="b-body">${backHtml(w)}</div>${info}${kinfo}${edn}<div class="mact">${acts.join('')}</div></div>`);
+}
+/* the edit box (from the word box, the back of a card while studying, Xem ngẫu nhiên) */
+const wEditBtn = (id, from) => `<button class="icon-btn bedit" data-act="wedit" data-id="${esc(id)}" data-from="${from}" aria-label="Sửa từ này" title="Sửa từ${from === 'ses' ? ' (phím E)' : ''}">${ic('edit')}</button>`;
+function openEditWord(cid, from = '') {
+  const w = WORDS.get(wordOf(cid)); if (!w) return;
+  openModal(wordFormHtml(w, from));
+  if (IS_MOBILE) { const h = $('#modal .mh'); if (h) h.focus(); }   // no keyboard popping up before the learner picks a field
+}
+function wordFormHtml(w, from) {
+  const cn = w.g === 'c', own = w.g === 'u', e = own ? null : editOf(w.id), o = own ? null : origOf(w);
+  const ch = f => !!e && f in e.fx && !sameF(f, o[f], w[f]);
+  const was = (show, txt) => show ? `<span class="hint was">Gốc: ${txt ? esc(txt) : '(trống)'}</span>` : '';
+  const exO = i => ((o && o.ex) || [])[i] || '', exCh = i => !!e && 'ex' in e.fx && normT(exO(i)) !== normT((w.ex || [])[i]);
+  const c1 = (w.c && w.c[0]) || ['', ''], c2 = (w.c && w.c[1]) || ['', ''];
+  const posOpts = POS_OPTIONS.some(([k]) => k === (w.pos || '')) ? POS_OPTIONS : POS_OPTIONS.concat([[w.pos, w.pos]]);
+  const posName = k => (POS_OPTIONS.find(x => x[0] === k) || [k, k])[1];
+  const phrO = o ? (o.c || []).filter(x => x && (x[0] || x[1])).map(x => plainOf(x[0]) + (x[1] ? ' — ' + x[1] : '')).join(' · ') : '';
+  const fld = (id, name, label, val, x = {}) => `<div class="field${x.span ? ' span2' : ''}"><label for="${id}">${label}${x.req ? ' <span class="req">*</span>' : ''}</label>${x.area
+    ? `<textarea id="${id}" name="${name}" rows="${x.rows || 3}"${x.jp ? ' class="jp" lang="ja"' : ''}>${esc(val || '')}</textarea>`
+    : `<input class="input${x.jp ? ' jp' : ''}" id="${id}" name="${name}"${x.jp ? ' lang="ja"' : ''} value="${esc(val || '')}">`}${x.hid ? `<span class="hint" id="${x.hid}"></span>` : ''}${x.was || ''}</div>`;
+  const body = [
+    fld('ew_w', 'w', cn ? 'Thuật ngữ' : 'Từ vựng (kanji nếu có)', w.w, {jp:true, was:was(ch('w'), o && o.w)}),
+    fld('ew_k', 'k', 'Cách đọc', w.k, {jp:true, req:true, hid:'h_ek', was:was(ch('k'), o && o.k)}),
+    cn ? '' : `<div class="field"><label for="ew_pos">Từ loại</label><select id="ew_pos" name="pos">${posOpts.map(([k, l]) => `<option value="${esc(k)}"${(w.pos || '') === k ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select>${was(ch('pos'), o ? posName(o.pos || '') : '')}</div>`,
+    cn ? '' : fld('ew_ptc', 'ptc', 'Trợ từ đi kèm', w.ptc, {jp:true, was:was(ch('ptc'), o && o.ptc)}),
+    fld('ew_hv', 'hv', 'Hán Việt', w.hv, {was:was(ch('hv'), o && o.hv)}),
+    fld('ew_m', 'm', 'Nghĩa', w.m, {req:true, hid:'h_em', span:cn, was:was(ch('m'), o && o.m)}),
+    cn ? '' : `<div class="field span2"><span class="flab">Cụm từ thường dùng</span>
+      <div class="pair-in"><input class="input jp" name="c1" lang="ja" value="${esc(c1[0])}" aria-label="Cụm từ 1 (tiếng Nhật)"><input class="input" name="v1" value="${esc(c1[1])}" aria-label="Nghĩa cụm từ 1"></div>
+      <div class="pair-in"><input class="input jp" name="c2" lang="ja" value="${esc(c2[0])}" aria-label="Cụm từ 2 (tiếng Nhật)"><input class="input" name="v2" value="${esc(c2[1])}" aria-label="Nghĩa cụm từ 2"></div>
+      <span class="hint" id="h_ec">Furigana viết trong ngoặc vuông ngay sau chữ Hán: <span class="jp">試験[しけん]</span>; từ chính đặt trong ngoặc nhọn: <span class="jp">{合格[ごうかく]}</span>.</span>${was(ch('c'), phrO)}</div>`,
+    cn ? fld('ew_exj', 'exj', 'Giải thích (tiếng Nhật)', (w.ex || [])[0], {area:true, jp:true, span:true, was:was(exCh(0), exO(0))}) : '',
+    cn ? fld('ew_exv', 'exv', 'Giải thích (tiếng Việt)', (w.ex || [])[1], {area:true, span:true, was:was(exCh(1), exO(1))}) : '',
+    cn ? fld('ew_fix', 'fix', 'Ghi chú', w.fix, {area:true, rows:2, span:true, was:was(ch('fix'), o && o.fix)}) : ''
+  ].join('');
+  const note = own ? 'Đây là từ bạn tự thêm: thay đổi được lưu thẳng vào từ này.'
+    : 'Thay đổi chỉ áp dụng cho tài khoản của bạn và đồng bộ sang các máy bạn đăng nhập. Bản gốc vẫn được giữ: bấm <b>Về bản gốc</b> để bỏ thay đổi.';
+  return `<div class="mpad wedit"><h2 class="mh" tabindex="-1">${ic('edit')} Sửa từ <span class="jp" lang="ja">${esc(w.w)}</span></h2><p class="small muted" style="margin:0 0 14px">${note}</p>
+    <form id="weditForm" class="form" data-id="${esc(w.id)}" data-from="${esc(from)}" autocomplete="off" novalidate><div class="fgrid">${body}</div>
+    <div class="factions"><button class="btn btn-pri" type="submit">${ic('check')} Lưu thay đổi</button>${e ? `<button class="btn btn-ghost" type="button" data-act="wrevert" data-id="${esc(w.id)}" data-from="${esc(from)}" data-confirm="Bấm lần nữa để về bản gốc">${ic('reset')} Về bản gốc</button>` : ''}<button class="btn btn-ghost" type="button" data-act="weditcancel" data-id="${esc(w.id)}" data-from="${esc(from)}">Hủy</button></div></form></div>`;
+}
+function readEdit(f, w) {
+  const g = n => (f.elements[n] ? f.elements[n].value : '');
+  const k = normJ(g('k')), d = {w:normJ(g('w')) || k, k, hv:normJ(g('hv')).toUpperCase(), m:normT(g('m'))};
+  if (w.g === 'c') { d.ex = [normT(g('exj')), normT(g('exv'))]; d.fix = normT(g('fix')); }
+  else { d.pos = g('pos'); d.ptc = normJ(g('ptc')); d.c = [[normJ(g('c1')), normJ(g('v1'))], [normJ(g('c2')), normJ(g('v2'))]].filter(x => x[0] || x[1]); }
+  return d;
+}
+function submitEdit(f) {
+  const id = f.dataset.id, from = f.dataset.from || '', w = WORDS.get(id); if (!w) { closeModal(); return; }
+  const d = readEdit(f, w), hk = f.querySelector('#h_ek'), hm = f.querySelector('#h_em'), hc = f.querySelector('#h_ec');
+  let bad = false;
+  const err = (el, t) => { if (el) { el.className = 'hint err'; el.textContent = t; } };
+  if (!d.k || !KANA_RE.test(d.k)) { err(hk, d.k ? 'Cách đọc chỉ gồm hiragana / katakana.' : 'Hãy nhập cách đọc.'); bad = true; f.elements.k.focus(); } else if (hk) { hk.className = 'hint'; hk.textContent = ''; }
+  if (!d.m) { err(hm, 'Hãy nhập nghĩa.'); if (!bad) f.elements.m.focus(); bad = true; } else if (hm) { hm.className = 'hint'; hm.textContent = ''; }
+  const odd = (d.c || []).find(([jp]) => jp.split('[').length !== jp.split(']').length || jp.split('{').length !== jp.split('}').length);
+  if (odd) { err(hc, `Cụm từ「${odd[0]}」thiếu ngoặc [ ] hoặc { }.`); bad = true; }
+  if (bad) return;
+  const changed = saveEdit(id, d);
+  toast(changed ? `Đã lưu thay đổi「${WORDS.get(id).w}」` : 'Không có gì thay đổi');
+  afterEdit(id, from);
+}
+function afterEdit(id, from) {   // redraw what shows the word: the page or card behind, and the word box when the edit came from it
+  if (from !== 'word') closeModal();
+  if (SES) { if (SES.mode !== 'quiz' && SES.cur) renderStudy(); }
+  else if (VW.open) renderViewer();
+  else { const y = window.scrollY; render(); window.scrollTo(0, y); }
+  if (from === 'word') openWord(id);
 }
 let modalBack = null;
 function openModal(html) { const m = $('#modal'); modalBack = document.activeElement; m.innerHTML = `<div class="mbox" role="dialog" aria-modal="true">${html}</div>`; m.hidden = false; const f = m.querySelector('button,input,textarea,select'); if (f) f.focus(); }
@@ -3665,6 +3805,7 @@ function viewSettings() {
       <p><b>Thẻ ngữ pháp</b>: mặt trước mặc định là mẫu câu và một câu ví dụ — tự nhớ ý nghĩa và cách nối rồi lật để xem cách nối (接続), ý nghĩa (意味), các câu ví dụ có furigana và lưu ý. Thẻ ngữ pháp đến hạn được ôn chung trong “Học hôm nay”.</p>
       <p><b>Luyện tập nhiều bộ</b>: gộp thẻ cần ôn của các bộ đã chọn và trộn ngẫu nhiên; lật thẻ rồi bấm <b>Đã nhớ</b> (thẻ xong, bỏ khỏi lượt này) hoặc <b>Đang học</b> (thẻ quay lại, xen ngẫu nhiên giữa các thẻ chưa ôn). Lịch ôn của thẻ được cập nhật theo câu trả lời.</p>
       <p><b>Bỏ thẻ khỏi lịch ôn</b>: với từ hoặc mẫu bạn đã thuộc chắc, mở thẻ đó (bấm vào nó trong danh sách của bộ thẻ hoặc trong ô tìm kiếm) rồi bấm <b>Bỏ khỏi lịch ôn</b>. Xem lại hoặc đưa về lịch ôn trong Học › Của tôi › Thẻ đã bỏ qua.</p>
+      <p><b>Sửa từ vựng</b>: mở một từ (bấm vào từ trong danh sách, trong bộ thẻ hoặc ô Tra cứu) rồi bấm <b>Sửa</b>; khi đang học hoặc xem ngẫu nhiên, lật thẻ rồi bấm nút bút chì trên dải màu (khi đang học có thể bấm phím <kbd>E</kbd>). Sửa được từ, cách đọc, từ loại, trợ từ, Hán Việt, nghĩa và cụm từ; từ chuyên ngành sửa được cả phần giải thích và ghi chú. Thay đổi chỉ áp dụng cho tài khoản của bạn và đồng bộ sang các máy bạn đăng nhập; bản gốc vẫn giữ, bấm <b>Về bản gốc</b> để bỏ thay đổi. Các từ đã sửa có trong Học › Của tôi › Từ đã sửa.</p>
       <p><b>Tài khoản học viên</b>: mỗi người đăng nhập bằng tên đăng nhập + mật khẩu của mình nên tiến độ không lẫn vào nhau; học trên máy nào cũng tiếp tục được. Dùng chung máy thì nhớ <b>Đăng xuất</b> sau khi học.</p>
       <p><b>Ký hiệu trong cách nối (接続)</b>: ${ctTok('V', '', false, '')} động từ (${ctTok('V', '', false, 'る')} thể từ điển, ${ctTok('V', '', false, 'た')}, ${ctTok('V', '', false, 'て')}, ${ctTok('V', '', false, 'ない')}…), ${ctTok('A', '', false, 'い')} tính từ đuôi い, ${ctTok('A', '', false, 'な')} tính từ đuôi な, ${ctTok('N', '', false, '')} danh từ. Phần gạch ngang là phần bỏ đi: ${ctTok('V', '', true, 'ます')} = bỏ ます (<span lang="ja"><ruby>書<rt>か</rt></ruby>きます → <ruby>書<rt>か</rt></ruby>き</span>), ${ctTok('A', '', true, 'い')} = bỏ い. Chữ màu nâu là mẫu ngữ pháp; mỗi dòng là một cách nối, ①② là cách nối riêng của từng nghĩa. Rê chuột (hoặc giữ ngón tay) lên ký hiệu để xem tên đầy đủ.</p>
       <p><b>Cài ứng dụng</b>: trên trang web của nhóm, bấm <b>Cài ứng dụng</b> (trang Hôm nay hoặc Cài đặt › Cài ứng dụng) để cài ${APP_NAME} lên điện thoại hoặc máy tính, không cần kho ứng dụng. Máy tính Windows còn có <b>bộ cài</b> để cài như phần mềm thông thường (nút <b>Tải bộ cài Windows</b>). Ứng dụng đã cài bắt buộc đăng nhập; mọi tiến độ được lưu vào máy chủ của nhóm.</p>
@@ -3851,7 +3992,7 @@ function cardHtml(w) {
   const foot = kc && S.settings.typeK ? 'Gõ cách đọc rồi bấm <b>Kiểm tra</b>, hoặc chạm vào thẻ để lật' : 'Chạm vào thẻ hoặc nhấn <kbd>Space</kbd> để lật';
   return `<div class="card3d ${wkClass(w.g)}${kc ? ' kc' : ''}" id="card" data-act="flip" tabindex="0" role="button" aria-label="${kc ? 'Thẻ đọc chữ Hán' : 'Thẻ từ vựng'} — nhấn để lật">
     <div class="card-in${fl ? ' flipped' : ''}" id="cardIn"><section class="face front" aria-hidden="${fl}">${bandHtml(w, kc ? '<span class="kbadge" title="Thẻ đọc chữ Hán">漢→あ</span>' : '')}${front}<div class="f-foot">${foot}</div></section>
-    <section class="face back" aria-hidden="${!fl}">${bandHtml(w)}<div class="b-body">${kc ? `<div id="kRes">${SES.typed ? kResHtml(w) : ''}</div>` : ''}${backHtml(w, vBackKeys(kc || listen))}</div></section></div></div>`;
+    <section class="face back" aria-hidden="${!fl}">${bandHtml(w, wEditBtn(w.id, 'ses'))}<div class="b-body">${kc ? `<div id="kRes">${SES.typed ? kResHtml(w) : ''}</div>` : ''}${backHtml(w, vBackKeys(kc || listen))}</div></section></div></div>`;
 }
 function rateSubs() {
   if (SES.mode === 'srs') { const c = getCard(SES.cur); return ['gặp lại sau ' + previewLabel(c, 1), 'ôn lại sau ' + previewLabel(c, 3)]; }
@@ -4415,6 +4556,7 @@ function deckById(id) {
   if (id === 'star') return {id, book:'my', kind:'x', title:'Thẻ đánh dấu', sub:'Thẻ bạn gắn sao khi xem ngẫu nhiên hoặc khi mở thẻ', short:'Đánh dấu', ids:starIds(), wk:'wk-4', unit:'thẻ'};
   if (CN_SET.has(id)) { const c = CN_SET.get(id); return {id, book:'cnf', kind:'v', title:c.vi, sub:c.jp, short:BOOKS.cnf.name, ids:c.ids, wk:'wk-c', unit:'từ'}; }
   if (/^[sn]/.test(id)) { const k = skzDeck(id); if (k) return k; }
+  if (id === 'edited') return {id, book:'my', kind:'v', title:'Từ đã sửa', sub:'Từ bạn đã sửa nghĩa, cách đọc, cụm từ…', short:'Đã sửa', ids:editedIds(), wk:'wk-3', unit:'từ'};
   if (id === 'known') return {id, book:'my', kind:'x', title:'Thẻ đã bỏ qua', sub:'Thẻ bạn đã bỏ khỏi lịch ôn vì thuộc chắc', short:'Đã bỏ qua', ids:knownIds(), wk:'wk-2', unit:'thẻ'};
   return null;
 }
@@ -4470,7 +4612,7 @@ function resetCut(cid) { const R = S.settings.deckReset; if (!R || typeof R !== 
 function applyDeckResets() {
   const R = deckResets(); let ch = false;
   for (const did in R) {
-    const d = deckById(did); if (!d || did === 'star' || did === 'known') continue;
+    const d = deckById(did); if (!d || did === 'star' || did === 'known' || did === 'edited') continue;
     const cut = Math.floor(R[did] / MIN);
     for (const cid of cardsOfDeck(d)) { const a = S.cards[cid]; if (a && a[7] <= cut) { delete S.cards[cid]; ch = true; } }
   }
@@ -4505,10 +4647,10 @@ function viewDeck() {
   const plan = known ? 'Thẻ ở đây không còn xuất hiện trong lịch ôn. Bấm vào một thẻ để xem lại hoặc đưa về lịch ôn.'
     : !st.total ? '' : due || nn ? `Lần luyện tới: ${due ? `ôn <b>${due}</b> thẻ đến hạn` : ''}${due && nn ? ' + ' : ''}${nn ? `<b>${nn}</b> thẻ mới` : ''} (tối đa ${lim} thẻ mới mỗi lần, đổi trong Cài đặt).` : 'Đã học hết và chưa có thẻ đến hạn — bấm Luyện tập để luyện lại cả bộ, hoặc Xem ngẫu nhiên.';
   const ownL = ownLearned(d), shared = d.own ? d.ids.length - d.own.length : 0;
-  const stop = !known && d.id !== 'star' && ownL ? `<button class="lnk danger" data-act="deckstop" data-id="${d.id}" data-confirm="Bấm lần nữa để xóa tiến độ ${ownL} thẻ">${ic('trash')} ${d.own ? `Đặt lại ${ownL} thẻ bổ sung của bộ này` : 'Dừng học bộ này'}</button>` : '';
+  const stop = !known && d.id !== 'star' && d.id !== 'edited' && ownL ? `<button class="lnk danger" data-act="deckstop" data-id="${d.id}" data-confirm="Bấm lần nữa để xóa tiến độ ${ownL} thẻ">${ic('trash')} ${d.own ? `Đặt lại ${ownL} thẻ bổ sung của bộ này` : 'Dừng học bộ này'}</button>` : '';
   const sharedNote = shared ? `<p class="small muted" style="margin:8px 0 0">${fmtN(shared)} thẻ trong bộ này dùng chung với giáo trình Mimikara: học ở đâu cũng được tính, và muốn đặt lại thì đặt lại ở bộ Mimikara.</p>` : '';
   const lim2 = UI.deckLimit || 200, rows = d.ids.slice(0, lim2).map(id => isGram(id) ? gRowHtml(id) : WORDS.has(wordOf(id)) ? rowHtml(wordOf(id)) : '').join('');
-  const empty = d.id === 'star' ? 'Chưa có thẻ nào. Khi xem ngẫu nhiên, bấm ☆ (phím C) để đánh dấu thẻ cần chú ý.' : known ? 'Chưa có thẻ nào. Với từ hoặc mẫu đã thuộc chắc, mở thẻ đó trong danh sách của bộ thẻ rồi bấm “Bỏ khỏi lịch ôn”.' : d.id === 'mine' ? 'Chưa có từ nào — bấm Thêm từ để tự thêm.' : 'Bộ này chưa có thẻ.';
+  const empty = d.id === 'star' ? 'Chưa có thẻ nào. Khi xem ngẫu nhiên, bấm ☆ (phím C) để đánh dấu thẻ cần chú ý.' : known ? 'Chưa có thẻ nào. Với từ hoặc mẫu đã thuộc chắc, mở thẻ đó trong danh sách của bộ thẻ rồi bấm “Bỏ khỏi lịch ôn”.' : d.id === 'edited' ? 'Chưa có từ nào. Mở một từ (trong danh sách hoặc ô Tra cứu) rồi bấm Sửa; khi đang học, lật thẻ rồi bấm nút bút chì.' : d.id === 'mine' ? 'Chưa có từ nào — bấm Thêm từ để tự thêm.' : 'Bộ này chưa có thẻ.';
   return `<nav class="crumb" aria-label="Vị trí">${d.book === 'cnf' ? `<button data-act="go" data-view="cn">${ic('left')} Chuyên ngành</button>` : `<button data-act="libtab" data-k="${d.book === 'my' ? 'm' : d.kind === 'g' ? 'g' : 'v'}"${d.book === 'my' ? '' : ` data-b="${d.own ? 'sk' : 'mm'}"`}>${ic('left')} Học</button>`}<span aria-hidden="true">›</span><span>${esc(BOOKS[d.book].name)}</span></nav>
     <section class="dkhero ${d.wk}"><div><h1>${esc(d.title)}</h1><p class="dsub">${esc(d.sub || '')}</p></div>
       ${acts ? `<div class="dkacts">${acts}</div>` : ''}
@@ -4566,9 +4708,9 @@ function renderViewer() {
   const top = `<div class="s-top"><div class="wrap s-top-in"><button class="icon-btn" data-act="vclose" aria-label="Đóng xem ngẫu nhiên">${ic('close')}</button><div class="s-title"><b>Xem ngẫu nhiên · ${esc(VW.title)}</b><div class="s-prog" role="progressbar" aria-valuenow="${pc}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pc}%"></i></div></div><div class="s-cnts"><span class="cnt vcnt">${Math.min(VW.i + 1, n)}<small>/${n}</small></span></div><button class="icon-btn vdir" data-act="vdir" title="Đổi chiều thẻ" aria-label="Đổi chiều thẻ, đang ${VW.dir === 'jv' ? 'Nhật sang Việt' : 'Việt sang Nhật'}">${VW.dir === 'jv' ? 'JP→VI' : 'VI→JP'}</button><button class="icon-btn" data-act="vshuffle" title="Xáo trộn lại từ đầu" aria-label="Xáo trộn lại từ đầu">${ic('shuffle')}</button><button class="icon-btn tog${VW.auto ? ' on' : ''}" id="vauto" data-act="vauto" aria-pressed="${VW.auto}" title="Tự phát (P)" aria-label="Tự phát">${ic(VW.auto ? 'pause' : 'play')}</button></div></div>`;
   if (VW.end) { el.innerHTML = top + `<div class="s-body"><div class="s-body-in">${vwEndHtml()}</div></div>`; const b = el.querySelector('.dacts .btn'); if (b) b.focus({preventScroll:true}); return; }
   const cid = VW.ids[VW.i], it = itemOf(cid), fc = vwFaces(cid), mk = VW.mark[cid], st = isStar(cid);
-  const band = isGram(cid) ? gBand(it) : bandHtml(it), cls = isGram(cid) ? gCls(it) : wkClass(it.g);
+  const band = isGram(cid) ? gBand(it) : bandHtml(it), cls = isGram(cid) ? gCls(it) : wkClass(it.g), bandB = isGram(cid) ? band : bandHtml(it, wEditBtn(wordOf(cid), 'vw'));
   const markH = mk ? `<span class="vmark ${mk > 0 ? 'ok' : 'no'}">${mk > 0 ? 'ĐÃ BIẾT' : 'CHƯA BIẾT'}</span>` : '';
-  el.innerHTML = top + `<div class="s-body" id="vbody"><div class="s-body-in"><div class="card3d vcard ${cls}" id="vcard" data-act="vflip" tabindex="0" role="button" aria-label="Thẻ ${VW.i + 1} trên ${n} — nhấn để lật"><div class="card-in${VW.flipped ? ' flipped' : ''}" id="vcardIn"><section class="face front" aria-hidden="${VW.flipped}">${band}<div class="f-body">${markH}${fc.f}</div></section><section class="face back" aria-hidden="${!VW.flipped}">${band}<div class="f-body vback">${markH}${fc.b}</div></section></div></div>${JA_VOICE ? `<div class="vsay"><button class="speak" data-act="vsay" aria-label="Nghe phát âm">${ic('speaker')}<span>Nghe</span></button></div>` : ''}<p class="vkeys">Phím tắt: <kbd>Space</kbd> lật · <kbd>←</kbd> / <kbd>A</kbd> thẻ trước · <kbd>→</kbd> / <kbd>D</kbd> thẻ sau · <kbd>↑</kbd> / <kbd>Z</kbd> biết · <kbd>↓</kbd> / <kbd>X</kbd> chưa biết · <kbd>C</kbd> đánh dấu · <kbd>P</kbd> tự phát · <kbd>Esc</kbd> đóng</p></div></div>`
+  el.innerHTML = top + `<div class="s-body" id="vbody"><div class="s-body-in"><div class="card3d vcard ${cls}" id="vcard" data-act="vflip" tabindex="0" role="button" aria-label="Thẻ ${VW.i + 1} trên ${n} — nhấn để lật"><div class="card-in${VW.flipped ? ' flipped' : ''}" id="vcardIn"><section class="face front" aria-hidden="${VW.flipped}">${band}<div class="f-body">${markH}${fc.f}</div></section><section class="face back" aria-hidden="${!VW.flipped}">${bandB}<div class="f-body vback">${markH}${fc.b}</div></section></div></div>${JA_VOICE ? `<div class="vsay"><button class="speak" data-act="vsay" aria-label="Nghe phát âm">${ic('speaker')}<span>Nghe</span></button></div>` : ''}<p class="vkeys">Phím tắt: <kbd>Space</kbd> lật · <kbd>←</kbd> / <kbd>A</kbd> thẻ trước · <kbd>→</kbd> / <kbd>D</kbd> thẻ sau · <kbd>↑</kbd> / <kbd>Z</kbd> biết · <kbd>↓</kbd> / <kbd>X</kbd> chưa biết · <kbd>C</kbd> đánh dấu · <kbd>P</kbd> tự phát · <kbd>Esc</kbd> đóng</p></div></div>`
     + `<div class="s-ctl"><div class="s-ctl-in vctl"><button class="vb no" data-act="vmark" data-v="-1" title="Chưa biết (↓ hoặc X)">${ic('close')}<span>Chưa biết</span></button><button class="vb nav" data-act="vprev" aria-label="Thẻ trước" title="Thẻ trước (←)" ${VW.i ? '' : 'disabled'}>${ic('left')}</button><button class="vb flip" data-act="vflip" title="Lật (Space)">${ic('flip')}<span>Lật</span></button><button class="vb nav" data-act="vnext" aria-label="Thẻ sau" title="Thẻ sau (→)">${ic('right')}</button><button class="vb ok" data-act="vmark" data-v="1" title="Biết (↑ hoặc Z)">${ic('check')}<span>Biết</span></button><button class="vb star${st ? ' on' : ''}" data-act="vstar" aria-pressed="${st}" aria-label="Đánh dấu thẻ" title="Đánh dấu (C)">${ic('star', st ? 'fill' : '')}</button></div></div>`;
   const c = $('#vcard'); if (c) c.focus({preventScroll:true});
 }
@@ -4698,7 +4840,7 @@ const sgLessonOf = g => { const d = SKZ_GL.get(SG_OWNER.get(g.id)); return d ? d
 /* last time each deck was opened for study: decks built from shared cards count as being studied only after that */
 const deckTimes = () => { const r = S.settings.dk; return r && typeof r === 'object' && !Array.isArray(r) ? r : {}; };
 function markDeck(d) {
-  if (!d || d.id === 'star' || d.id === 'known') return;
+  if (!d || d.id === 'star' || d.id === 'known' || d.id === 'edited') return;
   const t = now(), o = Object.assign({}, deckTimes(), {[d.id]:t}), ks = Object.keys(o);
   if (ks.length > 120) ks.sort((a, b) => o[a] - o[b]).slice(0, ks.length - 120).forEach(k => delete o[k]);
   S.settings.dk = o; S.settings.upd = t; touch('meta');
@@ -4977,7 +5119,7 @@ function viewLearn() {
     body = (n4 ? `<p class="src-note">${ic('info')}<span>Bài đọc do nhóm tự viết theo các dạng bài của đề JLPT N4: văn ngắn (thư, lời nhắn, thông báo), văn vừa và tìm thông tin (bảng giờ, bảng giá, lịch). Câu hỏi có lời giải thích, từ khó và bản dịch.</span></p>` : `<p class="src-note">${ic('info')}<span>Bài đọc do nhóm tự viết theo các dạng bài của đề JLPT N3 và các loại văn bản trong sách Shinkanzen Master N3 Đọc hiểu (thư, lời nhắn, thông báo, văn giải thích, ý kiến, tùy bút, tìm thông tin). Không dùng văn bản của sách.</span></p>`) + tips
       + RD_KIND.map(([l, kj, m], k) => { const rs = [...READS.values()].filter(r => r.k === k); if (!rs.length) return ''; return `<h3 class="sub-h"><span class="kj" lang="ja">${kj}</span> ${l} <small>${rs.length} bài · mỗi bài khoảng ${m} phút</small></h3><div class="rlist">${rs.map(r => readRow(r, n++)).join('')}</div>`; }).join('');
   } else {
-    body = `<div class="dkgrid">${['mine', 'star', 'known'].map(id => deckCard(deckById(id))).join('')}</div><div class="row" style="margin-top:14px"><button class="btn btn-sec" data-act="go" data-view="add">${ic('plus')} Thêm từ của tôi</button><button class="btn btn-ghost" data-act="go" data-view="list">${ic('list')} Danh sách tất cả từ</button></div>`;
+    body = `<div class="dkgrid">${['mine', 'star', 'known', 'edited'].map(id => deckCard(deckById(id))).join('')}</div><div class="row" style="margin-top:14px"><button class="btn btn-sec" data-act="go" data-view="add">${ic('plus')} Thêm từ của tôi</button><button class="btn btn-ghost" data-act="go" data-view="list">${ic('list')} Danh sách tất cả từ</button></div>`;
   }
   return `<div class="h-page"><div><h1>Học</h1><p>Chọn kỹ năng, rồi chọn một bộ để học thẻ mới, ôn thẻ đến hạn hoặc xem lướt</p></div></div>${tabs}${body}`;
 }
@@ -5382,6 +5524,9 @@ const ACT = {
   updhide: () => { lsSet(UPD_HIDE, WIN_DL ? WIN_DL.ver : ''); refreshInstallUI(); toast('Đã ẩn. Bộ cài mới có trong Cài đặt › Cài ứng dụng.'); },
   insthide: () => { lsSet(INST_HIDE, '1'); refreshInstallUI(); toast('Đã ẩn. Cài lúc nào cũng được ở Cài đặt › Cài ứng dụng.'); },
   resetcard: el => { if (!armed(el)) return; delete S.cards[el.dataset.id]; delete S.cards[kId(el.dataset.id)]; touch('srs'); closeModal(); toast('Đã đặt lại thẻ về “Chưa học”'); if (SES) renderStudy(); else render(); },
+  wedit: el => openEditWord(el.dataset.id, el.dataset.from || ''),
+  weditcancel: el => { if (el.dataset.from === 'word') openWord(wordOf(el.dataset.id)); else closeModal(); },
+  wrevert: el => { if (!armed(el)) return; const id = wordOf(el.dataset.id); if (revertEdit(id)) toast(`Đã về bản gốc「${WORDS.get(id).w}」`); afterEdit(id, el.dataset.from || ''); },
   editword: el => { closeModal(); UI.editId = el.dataset.id; UI.view = 'add'; saveUI(); render(); window.scrollTo(0, 0); },
   delword: el => { if (!armed(el)) return; const w = WORDS.get(el.dataset.id); deleteWord(el.dataset.id); closeModal(); if (UI.editId === el.dataset.id) UI.editId = null; toast(`Đã xóa「${w ? w.w : ''}」`); render(); },
   canceledit: () => { UI.editId = null; render(); },
@@ -5501,6 +5646,7 @@ document.addEventListener('click', e => {
 document.addEventListener('submit', e => {
   const f = e.target;
   if (f.id === 'addForm') { e.preventDefault(); submitForm(); }
+  else if (f.id === 'weditForm') { e.preventDefault(); submitEdit(f); }
   else if (f.classList && f.classList.contains('kform')) { e.preventDefault(); kcheck(); }
   else if (f.id === 'authForm') { e.preventDefault(); doAuth(f, e.submitter); }
   else if (f.id === 'pwForm') { e.preventDefault(); doPasswd(f); }
@@ -5551,6 +5697,7 @@ document.addEventListener('keydown', e => {
   if (e.key === ' ' || e.key === 'Enter') { if (e.target.closest('button') && e.target.id !== 'card' && e.key === 'Enter') return; e.preventDefault(); if (SES.cur) flip(); return; }
   if (e.key === 'Escape') { exitStudy(); return; }
   if (e.key === 'z' || e.key === 'Z') { e.preventDefault(); undo(); return; }
+  if ((e.key === 'e' || e.key === 'E') && SES.cur && !isGram(SES.cur) && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); openEditWord(SES.cur, 'ses'); return; }
   if ((/^[1-4]$/.test(e.key) || e.key === 'ArrowLeft' || e.key === 'ArrowRight') && SES.cur && SES.revealed && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); answer(e.key === '1' || e.key === 'ArrowLeft' ? 1 : 3); }   // v6.4: 1 or ← Đang học, 2 or → Đã nhớ (3 and 4, the old Nhớ and Dễ, still mean Đã nhớ)
 });
 document.addEventListener('pointerover', e => { const el = e.target.closest && e.target.closest('[data-tip]'); if (el) showTip(el); else hideTip(); });
